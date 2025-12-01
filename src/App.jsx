@@ -6,6 +6,7 @@ import Services from './Services';
 import { HoverPreview } from '../components/ui/hover-preview';
 import Partners from './Partners';
 import { WaitlistHero } from '../components/ui/waitlist-hero';
+import Footer from './Footer';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
       <Partners />
       {/* WaitlistHero dopo la sezione Partners */}
       <WaitlistHero />
+      <Footer />
     </>
   );
 }

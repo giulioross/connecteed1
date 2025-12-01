@@ -1,47 +1,46 @@
-"use client"
+import React, { useState, useRef, FormEvent } from "react";
 
-import { useState, useRef, FormEvent } from "react"
-
-export const WaitlistHero = () => {
-  const [email, setEmail] = useState("")
-  const [status, setStatus] = useState<"idle" | "loading" | "success">("idle")
-  const canvasRef = useRef<HTMLCanvasElement | null>(null)
+export const WaitlistHero: React.FC = () => {
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<"idle" | "loading" | "success">("idle");
+  const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    if (!email) return
+    e.preventDefault();
+    if (!email) return;
 
-    setStatus("loading")
+    setStatus("loading");
 
     // Simulate API delay
     setTimeout(() => {
-      setStatus("success")
-      setEmail("")
-      fireConfetti()
-    }, 1500)
-  }
+      setStatus("success");
+      setEmail("");
+      fireConfetti();
+    }, 1500);
+  };
 
   // --- Confetti Logic ---
   const fireConfetti = () => {
-    const canvas = canvasRef.current
-    if (!canvas) return
+    const canvas = canvasRef.current;
+    if (!canvas) return;
 
-    const ctx = canvas.getContext("2d")
-    if (!ctx) return
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+
     const particles: Array<{
-      x: number
-      y: number
-      vx: number
-      vy: number
-      life: number
-      color: string
-      size: number
-    }> = []
-    const colors = ["#0079da", "#10b981", "#fbbf24", "#f472b6", "#fff"]
+      x: number;
+      y: number;
+      vx: number;
+      vy: number;
+      life: number;
+      color: string;
+      size: number;
+    }> = [];
+    const colors = ["#0079da", "#10b981", "#fbbf24", "#f472b6", "#fff"];
 
     // Resize canvas to cover the button area mostly
-    canvas.width = canvas.offsetWidth
-    canvas.height = canvas.offsetHeight
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
 
     const createParticle = () => {
       return {
@@ -52,46 +51,46 @@ export const WaitlistHero = () => {
         life: 100,
         color: colors[Math.floor(Math.random() * colors.length)],
         size: Math.random() * 4 + 2,
-      }
-    }
+      };
+    };
 
     // Create batch of particles
     for (let i = 0; i < 50; i++) {
-      particles.push(createParticle())
+      particles.push(createParticle());
     }
 
     const animate = () => {
       if (particles.length === 0) {
-        ctx.clearRect(0, 0, canvas.width, canvas.height)
-        return
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        return;
       }
 
-      ctx.clearRect(0, 0, canvas.width, canvas.height)
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       for (let i = 0; i < particles.length; i++) {
-        const p = particles[i]
-        p.x += p.vx
-        p.y += p.vy
-        p.vy += 0.5 // Gravity
-        p.life -= 2
+        const p = particles[i];
+        p.x += p.vx;
+        p.y += p.vy;
+        p.vy += 0.5; // Gravity
+        p.life -= 2;
 
-        ctx.fillStyle = p.color
-        ctx.globalAlpha = Math.max(0, p.life / 100)
-        ctx.beginPath()
-        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2)
-        ctx.fill()
+        ctx.fillStyle = p.color;
+        ctx.globalAlpha = Math.max(0, p.life / 100);
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+        ctx.fill();
 
         if (p.life <= 0) {
-          particles.splice(i, 1)
-          i--
+          particles.splice(i, 1);
+          i--;
         }
       }
 
-      requestAnimationFrame(animate)
-    }
+      requestAnimationFrame(animate);
+    };
 
-    animate()
-  }
+    animate();
+  };
 
   // Color tokens
   const colors = {
@@ -102,7 +101,7 @@ export const WaitlistHero = () => {
     inputBg: "#27272a",
     baseBg: "#09090b",
     inputShadow: "rgba(255, 255, 255, 0.1)",
-  }
+  };
 
   return (
     <div className="w-full min-h-screen bg-black flex items-center justify-center">
@@ -169,7 +168,8 @@ export const WaitlistHero = () => {
         className="relative w-full h-screen overflow-hidden shadow-2xl"
         style={{
           backgroundColor: colors.baseBg,
-          fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+          fontFamily:
+            'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
         }}
       >
         {/* Background Decorative Layer */}
@@ -231,7 +231,7 @@ export const WaitlistHero = () => {
                 zIndex: 2,
               }}
             >
-              
+             
             </div>
           </div>
         </div>
@@ -247,14 +247,20 @@ export const WaitlistHero = () => {
         {/* Content Container */}
         <div className="relative z-20 w-full h-full flex flex-col items-center justify-end pb-24 gap-6">
           <div className="w-16 h-16 rounded-2xl shadow-lg overflow-hidden mb-2 ring-1 ring-white/10">
-
+            
           </div>
 
-          <h1 className="text-5xl md:text-6xl font-bold text-center tracking-tight" style={{ color: colors.textMain }}>
+          <h1
+            className="text-5xl md:text-6xl font-bold text-center tracking-tight"
+            style={{ color: colors.textMain }}
+          >
             Take a screenshot.
           </h1>
 
-          <p className="text-lg font-medium" style={{ color: colors.textSecondary }}>
+          <p
+            className="text-lg font-medium"
+            style={{ color: colors.textSecondary }}
+          >
             Save anything with a screenshot.
           </p>
 
@@ -293,10 +299,17 @@ export const WaitlistHero = () => {
                 </>
               )}
               <div
-                className={`flex items-center gap-2 text-white font-semibold text-lg ${status === "success" ? "animate-bounce-in" : ""}`}
+                className={`flex items-center gap-2 text-white font-semibold text-lg ${
+                  status === "success" ? "animate-bounce-in" : ""
+                }`}
               >
                 <div className="bg-white/20 p-1 rounded-full">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg
+                    className="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
                     <path
                       className={status === "success" ? "animate-checkmark" : ""}
                       strokeLinecap="round"
@@ -372,5 +385,5 @@ export const WaitlistHero = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
