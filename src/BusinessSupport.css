@@ -1,0 +1,126 @@
+.business-support-bg-white {
+  background: #fff;
+ 
+  box-shadow: 0 8px 32px 0 rgba(60,60,60,0.10);
+  padding: 32px 24px;
+}
+
+.business-support-section {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 64px 0 32px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  color: #222;
+  
+  box-shadow: 0 8px 32px 0 rgba(60,60,60,0.10);
+}
+
+
+.business-support-title-block {
+  text-align: center;
+  margin-bottom: 32px;
+  color: #222;
+}
+
+.business-support-subtitle {
+  color: #0070f3;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+
+.business-support-title {
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  line-height: 1.2;
+  color: #222;
+}
+
+.business-support-title .blue {
+  color: #0070f3;
+}
+
+.business-support-title .dark {
+  color: #222;
+  font-weight: 600;
+}
+
+
+.business-support-desc {
+  color: #444;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+
+.business-support-highlight {
+  color: #0070f3;
+  font-weight: 500;
+}
+
+.business-support-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 32px;
+  width: 100%;
+  margin: 40px 0 32px 0;
+}
+
+.business-support-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.13);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 12px 18px 12px;
+  min-height: 140px;
+  transition: box-shadow 0.2s;
+}
+
+.business-support-card:hover {
+  box-shadow: 0 12px 32px rgba(0,112,243,0.13);
+}
+
+.business-support-card-img {
+  width: 56px;
+  height: 56px;
+  background: #eaeaea;
+  border-radius: 8px;
+  margin-bottom: 18px;
+}
+
+.business-support-card-title {
+  color: #222;
+  font-size: 1.15rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.business-support-btn-block {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.business-support-btn {
+  background: #0070f3;
+  color: #fff;
+  border: none;
+  border-radius: 22px;
+  padding: 0.7rem 2.2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 16px rgba(0,112,243,0.10);
+  transition: background 0.2s, color 0.2s;
+}
+
+.business-support-btn:hover {
+  background: #0057c2;
+}

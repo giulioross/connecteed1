@@ -1,0 +1,72 @@
+.ai-innovation-section {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 64px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+
+}
+
+.ai-innovation-title-block {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.ai-innovation-subtitle {
+  color: #0070f3;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.ai-innovation-title {
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  line-height: 1.2;
+  color: #222;
+}
+
+.ai-innovation-title .blue {
+  color: #0070f3;
+}
+
+.ai-innovation-columns {
+  display: flex;
+  gap: 48px;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.ai-innovation-col {
+  flex: 1;
+  color: #888;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  max-width: 340px;
+}
+
+.ai-innovation-col-title {
+  color: #222;
+  font-weight: 700;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.ai-innovation-img-block {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.ai-innovation-img {
+  width: 100%;
+  max-width: 1080px;
+  border-radius: 12px;
+  object-fit: cover;
+}
