@@ -84,7 +84,7 @@
 /* WRAPPER CAROSELLO (1360) */
 .partners-slider-wrapper {
   width: 100%;
-  overflow: hidden;
+  overflow: visible; /* Cambia da hidden a visible per mostrare il box-shadow */
   margin: 0 auto;
   background: transparent; /* carte restano bianche, niente banda bianca piena */
 }
@@ -93,12 +93,17 @@
 .partners-slider {
   display: flex;
   gap: 32px;
-  animation: partners-scroll 18s linear infinite;
+  animation: partners-scroll 32s linear infinite;
   width: max-content;
 }
 
 .partners-slider-alt {
-  animation: partners-scroll-alt 22s linear infinite;
+  animation: partners-scroll-alt 32s linear infinite;
+}
+
+/* Aggiungi questa classe per scorrere verso destra */
+.partners-slider-reverse {
+  animation-direction: reverse;
 }
 
 @keyframes partners-scroll {

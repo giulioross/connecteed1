@@ -15,18 +15,21 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar />
-      
-     
-      <Hero />
-     <BlueGradientSection />
-      <BusinessSupport />
-      <Services />
-      {/* Sostituisce la sezione AI Innovation con HoverPreview */}
-      <HoverPreview />
-      <Partners />
-      {/* WaitlistHero dopo la sezione Partners */}
-      <WaitlistHero />
-      <Footer />
+      <Routes>
+        <Route path="/" element={
+          <>
+            <Hero />
+            <BlueGradientSection />
+            <BusinessSupport />
+            <Services />
+            <HoverPreview />
+            <Partners />
+            <WaitlistHero />
+            <Footer />
+          </>
+        } />
+        <Route path="/ContactPage" element={<ContactForm />} />
+      </Routes>
     </BrowserRouter>
   );
 }

@@ -17,7 +17,13 @@ const Navbar = () => {
 
           {/* SINISTRA: LOGO SVG (icona + scritta) */}
           <div className="navbar-left">
-            <img src={logo} alt="Connecteed logo" className="navbar-logo" />
+            <img
+              src={logo}
+              alt="Connecteed logo"
+              className="navbar-logo"
+              style={{ cursor: "pointer" }}
+              onClick={() => window.location.pathname = "/"}
+            />
           </div>
 
           {/* CENTRO: MENU */}
@@ -34,12 +40,11 @@ const Navbar = () => {
             <button
               className="navbar-contact"
               type="button"
-              onClick={() => window.location.href = "/ContactPage"}
+              onClick={() => window.location.pathname = "/ContactPage"}
             >
               Contattaci
             </button>
           </div>
-
         </div>
       </nav>
      

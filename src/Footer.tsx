@@ -23,10 +23,10 @@ function SocialBtn({
   );
 }
 
-export default function Footer() {
+export default function Footer({ noFixedHeight = false }: { noFixedHeight?: boolean } = {}) {
   return (
     <footer
-      className="w-full h-[746px] bg-[linear-gradient(180deg,#050608_0%,#232d47_100%)] text-white flex justify-center overflow-hidden"
+      className={`w-full bg-[linear-gradient(180deg,#050608_0%,#232d47_100%)] text-white flex justify-center overflow-hidden`}
       style={{ fontFamily: 'Host Grotesk, system-ui, sans-serif' }}
     >
       {/* FRAME 1440 × 746 */}
@@ -148,7 +148,8 @@ export default function Footer() {
           </div>
 
           {/* COLONNA DESTRA – MENU A CHIP */}
-          <div className="flex flex-col items-end justify-start w-[181px] h-[432px] ">
+          <div className="flex flex-col items-end justify-start w-[181px] h-[432px]">
+            
             <nav
               className="flex flex-col items-end gap-[16px]"
               aria-label="Footer navigation"
@@ -165,7 +166,7 @@ export default function Footer() {
               ].map((item) => (
                 <a
                   key={item}
-                  href="#"
+                  href="/ContactPage"
                   style={{
                     fontFamily: "Host Grotesk, system-ui, sans-serif",
                     fontWeight: 400,
@@ -174,8 +175,14 @@ export default function Footer() {
                     letterSpacing: "0px",
                     color: "#FFFFFF",
                     textAlign: "left",
+                    width: "fit-content",
+                    height: 40,
+                    paddingLeft: 16,
+                    paddingRight: 16,
+                    paddingTop: 8,
+                    paddingBottom: 8,
                   }}
-                  className="flex items-center justify-center"
+                  className="flex items-center justify-start"
                 >
                   {item}
                 </a>

@@ -82,7 +82,7 @@ export default function Partners() {
           <div className="partners-label">E i nostri partner</div>
 
           <div className="partners-slider-wrapper">
-            <div className="partners-slider partners-slider-alt">
+            <div className="partners-slider partners-slider-alt partners-slider-reverse">
               {[...partner, ...partner].map((p, i) => (
                 <div className="partner-card" key={p.name + i}>
                   <img
