@@ -1,4 +1,7 @@
 
+body {
+  min-width: 1440px;
+}
 
 #root {
 width: 100vw;

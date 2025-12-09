@@ -71,7 +71,7 @@ const ContactForm: React.FC = () => {
           className="w-full max-w-[1440px] px-[40px] pt-[0px] pb-[40px] box-border flex gap-[142px]"
           style={{
             minHeight: "920px",
-            marginBottom: 0, // rimuovi eventuale spazio sotto
+            marginBottom: 0,
           }}
         >
           {/* COLONNA SINISTRA – 668px */}
@@ -330,9 +330,8 @@ const ContactForm: React.FC = () => {
           </div>
         </div>
       </section>
-      <div style={{ width: "100vw", margin: 0, padding: 0 }}>
-        <Footer noFixedHeight={true} />
-      </div>
+      <Footer noFixedHeight={true} />
+      {/* RIMUOVI eventuali altri componenti dopo il footer */}
     </>
   );
 };
