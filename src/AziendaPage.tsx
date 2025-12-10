@@ -1,30 +1,33 @@
-import React from 'react';
-import { ListenIcon, DesignIcon, EvolveIcon } from './Icons';
-import './AziendaPage.css';
-import Footer from './Footer';
+import React from "react";
+import "./AziendaPage.css";
+import Footer from "./Footer";
 
-// --- Assets Replacement URLs ---
-const IMG_LAPTOP_DASHBOARD = "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop";
-/* =======================
-   HERO – QUALCOSA SU DI NOI
-   ======================= */
-
+/**
+ * Puoi sostituire questi URL con le tue immagini locali, ad esempio:
+ * import imgRed from "./assets/imgRed.png";
+ * ecc. e usare imgRed al posto dell'URL.
+ */
 const IMG_RED_WORKSHOP =
-  "https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=1000&auto=format&fit=crop";
-const IMG_CODE_SCREEN =
-  "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1000&auto=format&fit=crop";
+  "https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=1200&auto=format&fit=crop";
 const IMG_DESK_OFFICE =
-  "https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=1000&auto=format&fit=crop";
+  "https://images.unsplash.com/photo-1497215842964-222b430dc094?q=80&w=1200&auto=format&fit=crop";
+const IMG_CODE_SCREEN =
+  "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop";
+const IMG_LAPTOP_DASHBOARD =
+  "https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1500&auto=format&fit=crop";
 
-const AboutSection = () => {
+/* ---------------- ABOUT HERO + COLLAGE ---------------- */
+
+const AboutSection: React.FC = () => {
   return (
-    <section className="w-full bg-white pt-24 pb-24 flex justify-center">
-      <div className="w-full max-w-[1440px] px-6 md:px-[40px]">
-        {/* Titolo + testo */}
-        <h2 className="font-semibold about-title text-[#020B2D] mb-6">
+    <section className="about-hero-section w-full bg-white flex justify-center">
+      <div className="w-full max-w-[1440px]">
+        {/* Testo introduttivo */}
+        <h2 className="about-title font-semibold text-[#020b2d]">
           Qualcosa Su Di Noi
         </h2>
-        <p className="font-normal text-[16px] leading-[26px] text-[#5F6575] max-w-[520px] mb-16">
+
+        <p className="about-intro-text text-[#5F6575]">
           Persone, idee, risultati.
           <br />
           Dietro ogni progetto di successo ci sono persone: volti, storie, idee.
@@ -33,47 +36,32 @@ const AboutSection = () => {
           pensiero come motore di innovazione.
         </p>
 
-        {/* COLLAGE IMMAGINI – strutturato per il CSS che hai scritto */}
-        <div className="about-section-images max-w-[1200px] mx-auto">
-          {/* Immagine rossa grande in basso a sinistra */}
+        {/* COLLAGE IMMAGINI */}
+        <div className="about-section-images">
+          {/* Immagine rossa grande a sinistra */}
           <div className="about-section-img main-img">
             <img
               src={IMG_RED_WORKSHOP}
               alt="Workshop alla lavagna"
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-                display: "block",
-              }}
+              className="w-full h-full object-cover"
             />
           </div>
 
-          {/* Immagine desk in b/n sopra la rossa, spostata a destra */}
+          {/* Immagine b/n centrale */}
           <div className="about-section-img grayscale">
             <img
               src={IMG_DESK_OFFICE}
               alt="Desk ufficio"
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-                display: "block",
-              }}
+              className="w-full h-full object-cover"
             />
           </div>
 
-          {/* Immagine codice in alto a destra */}
+          {/* Immagine codice a destra */}
           <div className="about-section-code-img">
             <img
               src={IMG_CODE_SCREEN}
               alt="Schermata di codice"
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-                display: "block",
-              }}
+              className="w-full h-full object-cover"
             />
           </div>
         </div>
@@ -82,85 +70,88 @@ const AboutSection = () => {
   );
 };
 
-const StatsSection = () => {
+/* ---------------- STATS ---------------- */
+
+const StatsSection: React.FC = () => {
   return (
-    <section className="w-full bg-white py-12 md:py-20 flex justify-center">
-      <div className="w-full max-w-[1440px] px-6 md:px-[40px] flex flex-row justify-between items-center text-center gap-12 md:gap-0">
-        <div className="flex-1 w-full stats-container">
-          <div className="font-semibold text-[64px] md:text-[80px] leading-[1] text-[#020b2d] mb-2 stat-number">2020</div>
-          <div className="text-[18px] md:text-[20px] text-[#020b2d] stat-label">Anno di fondazione</div>
+    <section className="stats-section w-full bg-white flex justify-center">
+      <div className="w-full max-w-[1440px] stats-row">
+        <div className="text-center flex-1">
+          <div className="stat-number">2020</div>
+          <div className="stat-label">Anno di fondazione</div>
         </div>
-        <div className="flex-1 w-full stats-container">
-          <div className="font-semibold text-[64px] md:text-[80px] leading-[1] text-[#020b2d] mb-2 stat-number">21</div>
-          <div className="text-[18px] md:text-[20px] text-[#020b2d] stat-label">Dipendenti</div>
+        <div className="text-center flex-1">
+          <div className="stat-number">21</div>
+          <div className="stat-label">Dipendenti</div>
         </div>
-        <div className="flex-1 w-full">
-          <div className="font-semibold text-[64px] md:text-[80px] leading-[1] text-[#020b2d] mb-2 stat-number">70</div>
-          <div className="text-[18px] md:text-[20px] text-[#020b2d] stat-label">Progetti all’attivo</div>
+        <div className="text-center flex-1">
+          <div className="stat-number">70</div>
+          <div className="stat-label">Progetti all’attivo</div>
         </div>
       </div>
     </section>
   );
 };
 
-const ValuesSection = () => {
+/* ---------------- VALORI ---------------- */
+
+const ValuesSection: React.FC = () => {
   return (
-    <section className="w-full bg-white py-16 md:py-24 flex justify-center overflow-hidden">
-      <div className="w-full max-w-[1440px] px-6 md:px-[40px] flex flex-row gap-12 lg:gap-20 items-center">
-        {/* COLONNA SINISTRA – TESTO */}
-        <div className="lg:w-1/2 flex flex-col justify-center">
-          <h2 className="font-semibold text-3xl md:text-[40px] leading-[48px] text-[#020b2d] mb-8 section-title">
-            I nostri valori
-          </h2>
-          <p className="font-normal text-[16px] leading-[26px] text-[#5F6575] max-w-[500px]">
+    <section className="w-full bg-white flex justify-center">
+      <div className="values-section">
+        {/* Testo a sinistra */}
+        <div className="values-text">
+          <h2 className="section-title text-[#020b2d] mb-6">I nostri valori</h2>
+          <p className="text-[#5F6575] text-[16px] leading-[26px]">
             Persone, idee, risultati.
             <br />
-            Dietro ogni progetto di successo ci sono persone: volti, storie, idee.
-            <br /> <br />
-            Il nostro team è prima di tutto una squadra, crediamo nella
+            Dietro ogni progetto di successo ci sono persone: volti, storie,
+            idee. Il nostro team è prima di tutto una squadra, crediamo nella
             forza della collaborazione, nell&apos;ascolto reciproco e nella
             diversità di pensiero come motore di innovazione.
           </p>
         </div>
-        {/* COLONNA DESTRA – IMMAGINE */}
-        <div className="lg:w-1/2 flex items-center justify-center">
-          <div className="relative min-h-[300px] lg:h-[400px] w-full rounded-[32px] overflow-hidden bg-gray-50 flex items-center justify-center">
-            <div
-              className="absolute inset-0 opacity-40"
-              style={{
-                backgroundImage: `
-                  linear-gradient(45deg, rgb(203, 213, 225) 25%, transparent 25%),
-                  linear-gradient(-45deg, rgb(203, 213, 225) 25%, transparent 25%),
-                  linear-gradient(45deg, transparent 75%, rgb(203, 213, 225) 75%),
-                  linear-gradient(-45deg, transparent 75%, rgb(203, 213, 225) 75%)
-                `,
-                backgroundSize: "60px 60px",
-                backgroundPosition: "0px 0px, 0px 30px, 30px -30px, -30px 0px",
-              }}
-            />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-24 h-24 bg-white/50 rounded-full blur-2xl"></div>
-            </div>
-          </div>
+
+        {/* Checkerboard a destra */}
+        <div className="values-image">
+          <div
+            className="checkerboard-bg"
+            style={{
+              width: "100%",
+              height: "100%",
+              backgroundImage: `
+                linear-gradient(45deg, #e5ebf5 25%, transparent 25%),
+                linear-gradient(-45deg, #e5ebf5 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, #e5ebf5 75%),
+                linear-gradient(-45deg, transparent 75%, #e5ebf5 75%)
+              `,
+              backgroundSize: "60px 60px",
+              backgroundPosition:
+                "0 0, 0 30px, 30px -30px, -30px 0",
+            }}
+          />
         </div>
       </div>
     </section>
   );
 };
-const ApproachSection = () => {
+
+/* ---------------- APPROCCIO ---------------- */
+
+const ApproachSection: React.FC = () => {
   return (
-    <section className="w-full bg-white py-16 md:py-24 flex justify-center">
-      <div className="w-full max-w-[1440px] px-6 md:px-[40px]">
-        <h2 className="font-semibold text-3xl md:text-[40px] leading-[48px] text-[#020b2d] mb-16 md:text-left text-center section-title">
+    <section className="approach-section w-full bg-white flex justify-center">
+      <div className="w-full max-w-[1440px]">
+        <h2 className="section-title text-[#020b2d] mb-16">
           Il nostro approccio
         </h2>
 
-        {/* 3 colonne SEMPRE orizzontali */}
-        <div className="grid grid-cols-3 gap-12 text-center">
-          {/* CARD 1 */}
-          <div className="flex flex-col items-center group">
+        <div className="approach-grid">
+          {/* Card 1 */}
+          <div className="approach-card flex flex-col items-center group text-center">
             <div className="mb-6 transform transition-transform duration-300 group-hover:scale-110">
               <div className="w-[80px] h-[80px] rounded-full bg-[#E6F0FF] flex items-center justify-center text-[#2D7FF9]">
+                {/* Icona Ascoltiamo */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="32"
@@ -177,7 +168,6 @@ const ApproachSection = () => {
                 </svg>
               </div>
             </div>
-
             <h3 className="font-semibold text-[20px] text-[#020b2d] mb-4">
               Ascoltiamo
             </h3>
@@ -188,10 +178,11 @@ const ApproachSection = () => {
             </p>
           </div>
 
-          {/* CARD 2 */}
-          <div className="flex flex-col items-center group">
+          {/* Card 2 */}
+          <div className="approach-card flex flex-col items-center group text-center">
             <div className="mb-6 transform transition-transform duration-300 group-hover:scale-110">
               <div className="w-[80px] h-[80px] rounded-full bg-[#E6F0FF] flex items-center justify-center text-[#2D7FF9]">
+                {/* Icona Progettiamo */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="32"
@@ -211,7 +202,6 @@ const ApproachSection = () => {
                 </svg>
               </div>
             </div>
-
             <h3 className="font-semibold text-[20px] text-[#020b2d] mb-4">
               Progettiamo
             </h3>
@@ -222,10 +212,11 @@ const ApproachSection = () => {
             </p>
           </div>
 
-          {/* CARD 3 */}
-          <div className="flex flex-col items-center group">
+          {/* Card 3 */}
+          <div className="approach-card flex flex-col items-center group text-center">
             <div className="mb-6 transform transition-transform duration-300 group-hover:scale-110">
               <div className="w-[80px] h-[80px] rounded-full bg-[#E6F0FF] flex items-center justify-center text-[#2D7FF9]">
+                {/* Icona Evolviamo */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="32"
@@ -242,7 +233,6 @@ const ApproachSection = () => {
                 </svg>
               </div>
             </div>
-
             <h3 className="font-semibold text-[20px] text-[#020b2d] mb-4">
               Evolviamo
             </h3>
@@ -257,80 +247,57 @@ const ApproachSection = () => {
   );
 };
 
-// se hai già un import per l'immagine, riusalo:
-// import imgLaptop from "./assets/imgLaptop.png";
+/* ---------------- A COSA ASPIRIAMO ---------------- */
 
-const AspirationsSection = () => {
+const AspirationsSection: React.FC = () => {
   return (
-    <section className="w-full bg-[#0e1a24] text-white py-0 flex justify-center items-stretch min-h-[600px] aspirations-section" style={{ minHeight: 600, padding: 0 }}>
-      <div className="w-full max-w-[1440px] flex flex-row items-stretch min-h-[600px] p-0 m-0">
-        {/* COLONNA SINISTRA: Testo */}
-        <div className="flex-1 flex flex-col justify-center px-6 md:px-[80px] py-[80px]">
-          <h2
-            className="font-normal text-[40px] leading-[48px] mb-10 section-title"
-            style={{
-              color: "#F8FAFF",
-              fontWeight: 400,
-              fontFamily: "Host Grotesk, system-ui, sans-serif",
-              marginBottom: 40,
-            }}
-          >
+    <section className="aspirations-section w-full flex justify-center">
+      <div className="aspirations-inner">
+        {/* Testo a sinistra */}
+        <div className="aspirations-text">
+          <h2 className="section-title text-white mb-10">
             A cosa aspiriamo
           </h2>
-          <div
-            className="flex flex-col gap-6 text-[18px] leading-[28px] text-white/90 max-w-[700px]"
-            style={{
-              color: "#F8FAFF",
-              fontWeight: 300,
-              fontSize: 18,
-              lineHeight: "28px",
-              fontFamily: "Host Grotesk, system-ui, sans-serif",
-            }}
-          >
-            <p>
-              Vogliamo offrire soluzioni software e servizi digitali costruiti intorno ai bisogni reali delle imprese, unendo competenza tecnica, design e supporto continuo. Crediamo in un’innovazione semplice e accessibile, resa possibile da modelli di investimento flessibili che permettono alle aziende di evolvere mentre generano valore.
-            </p>
-            <p>
-              Il nostro obiettivo è creare un ecosistema digitale in cui ogni impresa possa innovare senza limiti, grazie a tecnologie personalizzate e sostenibili che trasformano i processi, liberano il potenziale e accelerano la crescita.
-            </p>
-          </div>
+          <p className="text-white/90 text-[16px] leading-[26px] mb-6">
+            Vogliamo offrire soluzioni software e servizi digitali costruiti
+            intorno ai bisogni reali delle imprese, unendo competenza tecnica,
+            design e supporto continuo. Crediamo in un’innovazione semplice e
+            accessibile, resa possibile da modelli di investimento flessibili
+            che permettono alle aziende di evolvere mentre generano valore.
+          </p>
+          <p className="text-white/90 text-[16px] leading-[26px]">
+            Il nostro obiettivo è creare un ecosistema digitale in cui ogni
+            impresa possa innovare senza limiti, grazie a tecnologie
+            personalizzate e sostenibili che trasformano i processi, liberano il
+            potenziale e accelerano la crescita.
+          </p>
         </div>
-        {/* COLONNA DESTRA: Immagine */}
-        <div className="flex-1 flex items-stretch justify-end relative min-h-[600px]">
+
+        {/* Immagine a destra */}
+        <div className="aspirations-image">
           <img
             src={IMG_LAPTOP_DASHBOARD}
-            alt="Platform Dashboard"
-            className="w-full h-full object-cover object-right"
-            style={{
-              borderTopLeftRadius: 0,
-              borderBottomLeftRadius: 0,
-              borderTopRightRadius: 0,
-              borderBottomRightRadius: 0,
-              minHeight: 600,
-              maxHeight: "100%",
-              maxWidth: "100%",
-            }}
+            alt="Dashboard su laptop"
+            className="w-full h-full object-cover"
           />
         </div>
       </div>
     </section>
   );
-}
+};
 
+/* ---------------- PAGE WRAPPER ---------------- */
 
-
-
-const AziendaPage  = () => {
+const AziendaPage: React.FC = () => {
   return (
-    // Added ID for scoped CSS
-    <main id="azienda-page-root" className="w-full flex flex-col">
+    <div id="azienda-page-root">
       <AboutSection />
       <StatsSection />
       <ValuesSection />
       <ApproachSection />
       <AspirationsSection />
       <Footer />
-    </main>
+    </div>
   );
 };
 
