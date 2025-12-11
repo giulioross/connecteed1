@@ -368,36 +368,7 @@ const ContactForm: React.FC = () => {
               <button
                 type="submit"
                 disabled={status === FormStatus.SUBMITTING}
-                style={{
-                  background: "rgba(255,255,255,0.9)",
-                  color: "#001b66",
-                  border: "1px solid rgba(255,255,255,0.35)",
-                  height: 40,
-                  width: 108,
-                  padding: "8px 16px",
-                  borderRadius: 20,
-                  fontFamily: "Host Grotesk, sans-serif",
-                  fontSize: 16,
-                  lineHeight: "24px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  cursor: "pointer",
-                  transition:
-                    "background .18s ease, color .18s ease, transform .10s ease",
-                  fontWeight: 400,
-                  marginTop: 16,
-                  boxShadow: "0_0_20px_rgba(255,255,255,0.35)",
-                  opacity: status === FormStatus.SUBMITTING ? 0.7 : 1,
-                }}
-                className="
-                  shadow-[0_0_20px_rgba(255,255,255,0.35)]
-                  transition-transform
-                  hover:scale-[1.01]
-                  active:scale-[0.99]
-                  disabled:cursor-not-allowed
-                  mt-8
-                "
+                className="contact-form-btn"
               >
                 {status === FormStatus.SUBMITTING ? "Invio in corso..." : "Invia messaggio"}
               </button>

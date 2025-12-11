@@ -269,3 +269,45 @@
     height: auto;
   }
 }
+
+/* Pulsante invia messaggio stile navbar-contact */
+.contact-form-btn {
+  background: rgba(255,255,255,0.9);
+  color: #001b66;
+  border: 1px solid rgba(255,255,255,0.35);
+  height: 40px;
+  width: 100%;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-family: "Host Grotesk", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition:
+    background .18s ease,
+    color .18s ease,
+    transform .10s ease;
+  font-weight: 400;
+  margin-top: 16px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.35);
+  opacity: 1;
+}
+
+.contact-form-btn:hover {
+  background: #D7EBFF;
+  color: #001B66;
+}
+
+.contact-form-btn:active {
+  background: #4FA1FF;
+  color: white;
+  transform: scale(0.97);
+}
+
+.contact-form-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}

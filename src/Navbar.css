@@ -150,7 +150,7 @@
 
 /* Pressed — blu pieno come immagine */
 .navbar-contact:active {
-  background: #2D8CFF;    /* BLU */
+  background: #4FA1FF;    /* BLU */
   color: white;
   transform: scale(0.97);
 }
