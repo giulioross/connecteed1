@@ -174,7 +174,11 @@ export default function Footer({ noFixedHeight = false }: { noFixedHeight?: bool
               ].map((item) => (
                 <a
                   key={item}
-                  href="/ContactPage"
+                  href={
+                    item === "Termini & Condizioni"
+                      ? "/terminicondizioni"
+                      : "/ContactPage"
+                  }
                   style={{
                     fontFamily: "Host Grotesk, system-ui, sans-serif",
                     fontWeight: 400,

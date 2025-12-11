@@ -10,7 +10,8 @@ import Partners from './Partners';
 import { WaitlistHero } from '../components/ui/waitlist-hero';
 import Footer from "./Footer.tsx";
 import { ContactForm } from "./ContactPage";
-import AziendaPage from "./AziendaPage"; // importa la pagina Azienda
+import AziendaPage from './AziendaPage.tsx';
+import TerminiCondizioni from "./terminicondizioni.tsx";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         } />
         <Route path="/ContactPage" element={<ContactForm />} />
         <Route path="/Azienda" element={<AziendaPage />} />
+        <Route path="/terminicondizioni" element={<TerminiCondizioni />} />
       </Routes>
     </BrowserRouter>
   );

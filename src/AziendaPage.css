@@ -3,29 +3,29 @@
    =========================== */
 
 #azienda-page-root {
-  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 40px 160px;
-  box-sizing: border-box;
-  text-align: left;
-  background-color: #ffffff;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif !important;
+  max-width: 1440px !important;
+  margin: 0 auto !important;
+  padding: 0 40px 160px !important; /* 40px laterali come in Figma */
+  box-sizing: border-box !important;
+  text-align: left !important;
+  background-color: #ffffff !important;
 }
 
 /* Titoli generali */
 
 .section-title {
-  font-size: 40px;
-  line-height: 48px;
-  font-weight: 600;
+  font-size: 40px !important;
+  line-height: 48px !important;
+  font-weight: 600 !important;
 }
 
-/* Paragrafi */
+/* Paragrafi generali */
 
 #azienda-page-root p {
-  font-size: 16px;
-  line-height: 26px;
-  color: #5f6575;
+  font-size: 16px !important;
+  line-height: 26px !important;
+  color: #5f6575 !important;
 }
 
 /* ===========================
@@ -33,19 +33,21 @@
    =========================== */
 
 .about-hero-section {
-  padding-top: 180px; /* distanza dal top (navbar) */
-  padding-bottom: 120px;
+  padding-top: 180px !important;  /* distanza dalla navbar */
+  padding-bottom: 120px !important;
+  background-color: #ffffff !important;
 }
 
 .about-title {
-  font-size: 56px;
-  line-height: 64px;
-  margin-bottom: 40px; /* spazio titolo / testo */
-  font-weight: 600;
+  font-size: 56px !important;
+  line-height: 64px !important;
+  margin-bottom: 40px !important;
+  font-weight: 600 !important;
+  color: #020b2d !important;
 }
 
 .about-intro-text {
-  max-width: 550px; /* blocco testo come Figma */
+  max-width: 550px !important; /* come in Figma */
 }
 
 /* ===========================
@@ -53,51 +55,59 @@
    =========================== */
 
 .about-section-images {
-  position: relative;
-  width: 100%;
-  max-width: 1360px; /* 1440 - 40 - 40 */
-  height: 550px;
-  margin-top: 40px;
+  position: relative !important;
+  width: 100% !important;
+  max-width: 1360px !important; /* 1440 - 40 - 40 */
+  height: 550px !important;
+  margin-top: 40px !important;
 }
 
-/* IMMAGINE ROSSA – 550 x 550, sinistra */
+/* IMMAGINE ROSSA – 550 x 550 */
 .about-section-img.main-img {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 550px;
-  height: 550px;
-  border-radius: 32px;
-  overflow: hidden;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-  z-index: 5;
+  position: absolute !important;
+  left: 0 !important;
+  top: 135px !important; /* come da tuo screenshot */
+  width: 550px !important;
+  height: 550px !important;
+  border-radius: 32px !important;
+  overflow: hidden !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1) !important;
+  z-index: 5 !important;
 }
 
-/* IMMAGINE B/N – 410 x 410, centrale */
+/* IMMAGINE B/N – 410 x 410 */
 .about-section-img.grayscale {
-  position: absolute;
-  left: 550px; /* subito dopo la rossa */
-  top: 70px;
-  width: 410px;
-  height: 410px;
-  border-radius: 32px;
-  overflow: hidden;
-  filter: grayscale(1);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-  z-index: 8;
+  position: absolute !important;
+  left: 550px !important; /* subito dopo la rossa */
+  top: 226px !important;
+  width: 410px !important;
+  height: 410px !important;
+  border-radius: 32px !important;
+  overflow: hidden !important;
+  filter: grayscale(1) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1) !important;
+  z-index: 8 !important;
 }
 
-/* IMMAGINE CODICE – 550 x 315, destra */
+/* IMMAGINE CODICE – 550 x 315 */
 .about-section-code-img {
-  position: absolute;
-  left: 1000px; /* 550 + 410 + 40 */
-  top: 0;
-  width: 550px;
-  height: 315px;
-  border-radius: 32px;
-  overflow: hidden;
-  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.15);
-  z-index: 10;
+  position: absolute !important;
+  left: 850px !important; /* allineata con misure della tavola (550 + 300 circa) */
+  top: 0 !important;
+  width: 550px !important;
+  height: 315px !important;
+  border-radius: 32px !important;
+  overflow: hidden !important;
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.15) !important;
+  z-index: 10 !important;
+}
+
+/* Immagini interne */
+.about-section-img img,
+.about-section-code-img img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
 }
 
 /* ===========================
@@ -105,29 +115,31 @@
    =========================== */
 
 .stats-section {
-  margin-top: 40px;
-  padding: 40px 0;
-  border-top: 1px solid #e5e7eb;
-  border-bottom: 1px solid #e5e7eb;
+  margin-top: 40px !important;
+  padding: 40px 0 !important;
+  border-top: 1px solid #e5e7eb !important;
+  border-bottom: 1px solid #e5e7eb !important;
 }
 
 .stats-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  max-width: 1360px !important;
+  margin: 0 auto !important;
 }
 
 .stat-number {
-  font-size: 80px;
-  line-height: 1;
-  font-weight: 600;
-  color: #020b2d;
+  font-size: 80px !important;
+  line-height: 1 !important;
+  font-weight: 600 !important;
+  color: #020b2d !important;
 }
 
 .stat-label {
-  margin-top: 12px;
-  font-size: 20px;
-  color: #020b2d;
+  margin-top: 12px !important;
+  font-size: 20px !important;
+  color: #020b2d !important;
 }
 
 /* ===========================
@@ -135,23 +147,32 @@
    =========================== */
 
 .values-section {
-  margin-top: 120px;
-  display: grid;
-  grid-template-columns: 553px 1fr;
-  column-gap: 40px;
-  align-items: center;
+  margin-top: 120px !important;
+  max-width: 1360px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  display: grid !important;
+  grid-template-columns: 553px 1fr !important;
+  column-gap: 40px !important;
+  align-items: center !important;
 }
 
 .values-text {
-  width: 553px;
+  width: 553px !important;
 }
 
 .values-image {
-  width: 100%;
-  height: 400px;
-  border-radius: 32px;
-  overflow: hidden;
-  position: relative;
+  width: 100% !important;
+  height: 400px !important;
+  border-radius: 32px !important;
+  overflow: hidden !important;
+  position: relative !important;
+}
+
+/* Checkerboard di sfondo */
+.values-image .checkerboard-bg {
+  width: 100% !important;
+  height: 100% !important;
 }
 
 /* ===========================
@@ -159,19 +180,24 @@
    =========================== */
 
 .approach-section {
-  margin-top: 80px;
+  margin-top: 80px !important;
+  background-color: #ffffff !important;
 }
 
-.approach-grid {
-  width: 1360px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 80px;
+.approach-section > .w-full,
+.approach-section > div {
+  max-width: 1360px !important;
+  margin: 0 auto !important;
 }
 
-.approach-card {
-  min-height: 236px;
+.approach-section .section-title {
+  margin-bottom: 40px !important;
+}
+
+/* le card sono già gestite via classi Tailwind, qui forzo min-height */
+.approach-section .approach-card,
+.approach-section .flex-1 {
+  min-height: 236px !important;
 }
 
 /* ===========================
@@ -179,30 +205,45 @@
    =========================== */
 
 .aspirations-section {
-  margin-top: 120px;
-  background-color: #020b2d;
-  color: #ffffff;
-  padding: 0 40px;
+  margin-top: 120px !important;
+  background-color: #020b2d !important;
+  color: #ffffff !important;
+  /* rimuovi padding qui, lo metti solo su .aspirations-text se serve */
+  position: relative !important;
+  overflow: hidden !important;
+  width: 100vw !important;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .aspirations-inner {
-  max-width: 1360px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 668px 1fr;
-  column-gap: 40px;
-  align-items: center;
+  max-width: 1360px !important;
+  margin: 0 auto !important;
+  display: grid !important;
+  grid-template-columns: 668px 1fr !important;
+  column-gap: 40px !important;
+  align-items: stretch !important;
+  height: 100%; /* assicura che prenda tutta l'altezza */
 }
 
 .aspirations-text {
-  width: 668px;
+  width: 668px !important;
+  /* padding se serve */
 }
 
 .aspirations-image {
-  max-width: 732px;
-  height: 100%;
- 
-  overflow: hidden;
+  width: 100% !important;
+  height: 100% !important;
+  overflow: hidden !important;
+  display: flex !important;
+  align-items: stretch !important;
+}
+
+.aspirations-image img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
 }
 
 /* ===========================
@@ -211,103 +252,183 @@
 
 @media (max-width: 1024px) {
   #azienda-page-root {
-    padding: 0 16px 80px;
+    padding: 0 16px 80px !important;
   }
 
   .about-hero-section {
-    padding-top: 120px;
-    padding-bottom: 60px;
+    padding-top: 120px !important;
+    padding-bottom: 60px !important;
   }
 
   .about-title {
-    font-size: 40px;
-    line-height: 48px;
+    font-size: 40px !important;
+    line-height: 48px !important;
   }
 
+  /* collage: impilo le immagini */
   .about-section-images,
   .about-section-img.main-img,
   .about-section-img.grayscale,
   .about-section-code-img {
-    position: static;
-    width: 100%;
-    height: auto;
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    margin-top: 16px !important;
   }
 
   .about-section-images {
-    max-width: 100%;
-    height: auto;
-    margin-top: 24px;
+    max-width: 100% !important;
+    height: auto !important;
   }
 
   .values-section {
-    grid-template-columns: 1fr;
-    row-gap: 40px;
+    grid-template-columns: 1fr !important;
+    row-gap: 40px !important;
   }
 
   .values-text,
   .aspirations-text {
-    width: 100%;
-  }
-
-  .approach-grid {
-    width: 100%;
-    grid-template-columns: 1fr;
-    row-gap: 40px;
+    width: 100% !important;
   }
 
   .aspirations-section {
-    padding: 80px 16px;
+    padding: 60px 16px !important;
   }
 
   .aspirations-inner {
-    grid-template-columns: 1fr;
-    row-gap: 40px;
+    grid-template-columns: 1fr !important;
+    row-gap: 40px !important;
   }
 
   .aspirations-image {
-    max-width: 100%;
-    height: auto;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .stats-row {
+    flex-direction: column !important;
+    gap: 24px !important;
   }
 }
 
-/* Pulsante invia messaggio stile navbar-contact */
+/* ===========================
+   BOTTONE FORM CONTATTO
+   =========================== */
+
 .contact-form-btn {
-  background: #fff; /* bianco pieno */
-  color: #001b66;
-  border: 1px solid rgba(255,255,255,0.35);
-  height: 40px;
-  width: 100%;
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-family: "Host Grotesk", sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
+  background: #fff !important;
+  color: #001b66 !important;
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
+  height: 40px !important;
+  width: 100% !important;
+  padding: 8px 16px !important;
+  border-radius: 20px !important;
+  font-family: "Host Grotesk", sans-serif !important;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
   transition:
-    background .18s ease,
-    color .18s ease,
-    transform .10s ease;
-  font-weight: 400;
-  margin-top: 16px;
-  box-shadow: none; /* rimuove la luminescenza */
-  opacity: 1;
+    background 0.18s ease,
+    color 0.18s ease,
+    transform 0.1s ease !important;
+  font-weight: 400 !important;
+  margin-top: 16px !important;
+  box-shadow: none !important;
+  opacity: 1 !important;
 }
 
 .contact-form-btn:hover {
-  background: #D7EBFF;
-  color: #001B66;
+  background: #d7ebff !important;
+  color: #001b66 !important;
 }
 
 .contact-form-btn:active {
-  background: #4FA1FF;
-  color: white;
-  transform: scale(0.97);
+  background: #4fa1ff !important;
+  color: #ffffff !important;
+  transform: scale(0.97) !important;
 }
 
 .contact-form-btn:disabled {
-  opacity: 0.7;
-  cursor: not-allowed;
+  opacity: 0.7 !important;
+  cursor: not-allowed !important;
+}
+
+/* Colori di testo per le sezioni principali */
+.text-navy,
+.section-title {
+  color: #020b2d !important;
+}
+
+.text-gray-text,
+.values-text p,
+.approach-section .text-gray-text,
+.stats-section .stat-label,
+.stats-section .stat-number {
+  color: #5f6575 !important;
+}
+
+/* Colori di testo per la sezione "A cosa aspiriamo" */
+.aspirations-section .aspirations-text,
+.aspirations-section .aspirations-text h2,
+.aspirations-section .aspirations-text p {
+  color: #e5e7eb !important; /* grigio chiaro leggibile su sfondo blu */
+}
+
+.text-primary-foreground,
+.text-primary-foreground\/90,
+.aspirations-section .section-title,
+.aspirations-section p {
+  color: #fff !important;
+}
+
+/* Background per .bg-background */
+.bg-background {
+  background: #fff !important;
+}
+
+/* Icon background */
+.bg-icon-bg {
+  background: #E6F0FF !important;
+}
+
+/* Gradient e colori per la pagina termini e condizioni */
+.bg-gradient-terms {
+  background: linear-gradient(180deg, #050608 0%, #2b3c6a 100%) !important;
+  min-height: 100vh !important;
+}
+
+.text-terms-title {
+  color: #fff !important;
+}
+
+.text-terms-subtitle {
+  color: #e5e7eb !important;
+}
+
+.text-terms-article {
+  color: #fff !important;
+}
+
+.text-terms-text {
+  color: #e5e7eb !important;
+}
+
+/* Termini e condizioni: titoli e testo */
+.text-terms-title,
+.text-terms-article,
+.terminicondizioni h1,
+.terminicondizioni h2 {
+  color: #010F1C !important;
+}
+
+.text-terms-subtitle,
+.text-terms-text,
+.terminicondizioni p,
+.terminicondizioni li,
+.terminicondizioni div,
+.terminicondizioni section {
+  color: #464646 !important;
 }
