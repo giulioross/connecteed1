@@ -4,6 +4,7 @@ import Footer from "./Footer";
 import videoBg from "./assets/Composizione1.mp4";
 import markerPin from "./assets/marker-pin-01.svg";
 import mailIcon from "./assets/mail-01.svg";
+import rectangleCheck from "./assets/Rectangle 42.svg";
 
 // Campo input con label animata sopra la linea
 function FloatingInput({
@@ -319,8 +320,19 @@ const ContactForm: React.FC = () => {
                 >
                   Termini e Condizioni*
                 </span>
-                <label className="flex items-start gap-[16px] cursor-pointer">
-                  <div className="relative flex items-center mt-[2px]">
+                <label
+                  className="flex gap-[12px] cursor-pointer"
+                  style={{ alignItems: "flex-start" }}
+                >
+                  <div
+                    className="relative"
+                    style={{
+                      height: 24,
+                      marginTop: 4,
+                      display: "flex",
+                      alignItems: "flex-start",
+                    }}
+                  >
                     <input
                       type="checkbox"
                       name="agreedToTerms"
@@ -332,24 +344,28 @@ const ContactForm: React.FC = () => {
                         borderRadius: 4,
                         border: "1px solid #F5F4F9",
                         background: "transparent",
+                        verticalAlign: "top",
+                        marginTop: 0,
+                        marginBottom: 0,
+                        display: "block",
                       }}
                     />
-                    <svg
-                      className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-white opacity-0 peer-checked:opacity-100 transition-opacity"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M12 5L7 10L4 7"
-                        stroke="currentColor"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
+                    {/* Rectangle SVG check custom */}
+                    {formData.agreedToTerms && (
+                      <img
+                        src={rectangleCheck}
+                        alt="Checkbox checked"
+                        style={{
+                          position: "absolute",
+                          left: "52.5%",
+                          top: "50%",
+                          transform: "translate(-50%, -50%)",
+                          width: 12,
+                          height: 12,
+                          pointerEvents: "none",
+                        }}
                       />
-                    </svg>
+                    )}
                   </div>
                   <p
                     className="font-normal text-[16px] leading-[24px] text-white"
@@ -357,6 +373,10 @@ const ContactForm: React.FC = () => {
                       fontFamily: "Host Grotesk, system-ui, sans-serif",
                       fontWeight: 400,
                       color: "#F5F4F9",
+                      margin: 0,
+                      paddingTop: 2,
+                      lineHeight: "24px",
+                      display: "block",
                     }}
                   >
                     Autorizzo il trattamento dei miei dati personali secondo quanto
