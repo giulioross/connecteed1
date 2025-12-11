@@ -4,7 +4,6 @@
 
 #azienda-page-root {
   font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif !important;
-  max-width: 1440px !important;
   margin: 0 auto !important;
   padding: 0 40px 160px !important; /* 40px laterali come in Figma */
   box-sizing: border-box !important;
@@ -184,7 +183,7 @@
   background-color: #ffffff !important;
 }
 
-.approach-section > .w-full,
+.approach-section > ,
 .approach-section > div {
   max-width: 1360px !important;
   margin: 0 auto !important;

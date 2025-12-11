@@ -1,20 +1,35 @@
-import React from "react";
 
+import React from "react"; 
+import Footer from "./Footer";
 
 const TerminiCondizioni: React.FC = () => {
   return (
-    <main
-      className="min-h-screen py-16 px-4 md:px-8"
-      style={{
-        backgroundImage:
-          "linear-gradient(180deg, #FFFFFF 0%, #B0DFFF 47%, #D3EFFF 100%)",
-        paddingTop: "180px",
-      }}
-    >
+    <>
+      <main
+        className="min-h-screen py-16"
+        style={{
+          backgroundImage:
+            "linear-gradient(180deg, #FFFFFF 0%, #B0DFFF 47%, #D3EFFF 100%)",
+          paddingTop: "94px",
+          paddingLeft: "40px",
+          paddingRight: "40px",
+          paddingBottom: "159px",
+        }}
+      >
       <article className="max-w-4xl mx-auto">
         {/* Header */}
         <header className="text-center mb-16">
-          <h1 className="text-3xl md:text-4xl font-semibold text-terms-title mb-4">
+          <h1
+            className="mb-4"
+            style={{
+              fontFamily: 'Host Grotesk, sans-serif',
+              fontWeight: 500,
+              fontSize: "56px",
+              lineHeight: "88px",
+              letterSpacing: 0,
+              color: "#0A0A0A"
+            }}
+          >
             Termini E Condizioni
           </h1>
           <p className="text-terms-subtitle text-lg">
@@ -382,7 +397,13 @@ const TerminiCondizioni: React.FC = () => {
         </div>
       </article>
     </main>
+    
+   {/* 👇 Footer aggiunto qui */}
+      <Footer />
+    </>
   );
 };
+
+
 
 export default TerminiCondizioni;

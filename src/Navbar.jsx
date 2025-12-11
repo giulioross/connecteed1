@@ -22,7 +22,14 @@ const Navbar = () => {
               alt="Connecteed logo"
               className="navbar-logo"
               style={{ cursor: "pointer" }}
+              tabIndex={0}
+              aria-label="Homepage Connecteed"
               onClick={() => window.location.pathname = "/"}
+              onKeyDown={e => {
+                if (e.key === "Enter" || e.key === " ") {
+                  window.location.pathname = "/";
+                }
+              }}
             />
           </div>
 

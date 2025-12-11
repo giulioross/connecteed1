@@ -43,7 +43,7 @@ const AboutSection: React.FC = () => {
           </div>
 
           {/* Grayscale image - center, overlapping */}
-          <div className="absolute left-[475px] top-[135px] w-[410px] h-[410px] rounded-3xl overflow-hidden shadow-lg z-[8] grayscale">
+          <div className="absolute left-[475px] top-[335px] w-[410px] h-[410px] rounded-3xl overflow-hidden shadow-lg z-[8] grayscale">
             <img
               src={IMG_DESK_OFFICE}
               alt="Desk ufficio"
@@ -52,13 +52,16 @@ const AboutSection: React.FC = () => {
           </div>
 
           {/* Code image - right top */}
-          <div className="absolute right-0 top-0 w-[510px] h-[315px] rounded-3xl overflow-hidden shadow-xl z-[10]">
-            <img
-              src={IMG_CODE_SCREEN}
-              alt="Schermata di codice"
-              className="w-full h-full object-cover"
-            />
-          </div>
+    <div
+      className="absolute right-0 top-0 w-[510px] h-[315px] rounded-3xl overflow-hidden shadow-xl z-[10]"
+      style={{ paddingLeft: "700px" }}
+    >
+      <img
+        src={IMG_CODE_SCREEN}
+        alt="Schermata di codice"
+        className="w-full h-full object-cover"
+      />
+    </div>
         </div>
       </div>
     </section>
@@ -218,7 +221,7 @@ const AspirationsSection: React.FC = () => {
 
 const AziendaPage: React.FC = () => {
   return (
-    <div className="w-full max-w-[1440px] mx-auto min-h-screen bg-background">
+    <div className="w-full mx-auto min-h-screen bg-background">
       <AboutSection />
       <StatsSection />
       <ValuesSection />

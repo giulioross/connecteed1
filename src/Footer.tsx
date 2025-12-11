@@ -17,7 +17,14 @@ function SocialBtn({
     <a
       href="#"
       aria-label={label}
-      className="w-[48px] h-[48px] rounded-[14px] border border-white/40 flex items-center justify-center hover:border-white transition-colors duration-200"
+      className="w-[48px] h-[48px] rounded-[14px] border border-white/40 flex items-center justify-center transition-colors duration-200"
+      style={{ position: "relative" }}
+      onMouseDown={e => e.currentTarget.style.background = "#07205F"}
+      onMouseUp={e => e.currentTarget.style.background = "#2877FF"}
+      onMouseLeave={e => e.currentTarget.style.background = ""}
+      onFocus={e => e.currentTarget.style.background = "#2877FF"}
+      onBlur={e => e.currentTarget.style.background = ""}
+      onMouseOver={e => e.currentTarget.style.background = "#2877FF"}
     >
       <div className="w-[20px] h-[20px] text-white opacity-90">{children}</div>
     </a>

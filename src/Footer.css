@@ -154,9 +154,14 @@ footer.footer {
   transition: background 0.2s ease, transform 0.1s ease;
 }
 
+
 .footer-social-btn:hover {
-  background: rgba(255, 255, 255, 0.12);
+  background: #2877FF;
   transform: translateY(-1px);
+}
+
+.footer-social-btn:active {
+  background: #07205F;
 }
 
 .footer-social-icon {
