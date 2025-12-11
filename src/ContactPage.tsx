@@ -3,6 +3,62 @@ import { ContactFormData, FormStatus } from "./types";
 import Footer from "./Footer";
 import videoBg from "./assets/Composizione1.mp4";
 
+// Campo input con label animata sopra la linea
+function FloatingInput({
+  label,
+  name,
+  type = "text",
+  value,
+  onChange,
+  required = false,
+}) {
+  const [focused, setFocused] = useState(false);
+  const isActive = focused || value;
+
+  return (
+    <div style={{ position: "relative", marginBottom: 32 }}>
+      <label
+        htmlFor={name}
+        style={{
+          position: "absolute",
+          left: 0,
+          top: isActive ? -18 : 16,
+          fontSize: isActive ? 14 : 20,
+          color: isActive ? "#D7EBFF" : "#F5F4F9",
+          fontFamily: "Host Grotesk, system-ui, sans-serif",
+          fontWeight: 400,
+          lineHeight: isActive ? "18px" : "28px",
+          transition: "all 0.22s cubic-bezier(.4,0,.2,1)",
+          pointerEvents: "none",
+        }}
+      >
+        {label}
+      </label>
+      <input
+        id={name}
+        name={name}
+        type={type}
+        value={value}
+        onChange={onChange}
+        required={required}
+        onFocus={() => setFocused(true)}
+        onBlur={() => setFocused(false)}
+        className="w-full bg-transparent text-white text-[20px] leading-[28px] h-[56px] border-b border-white focus:border-white outline-none transition-colors duration-200 px-0"
+        style={{
+          fontFamily: "Host Grotesk, system-ui, sans-serif",
+          fontWeight: 400,
+          fontSize: 20,
+          lineHeight: "28px",
+          border: "none",
+          borderBottom: "2px solid #fff",
+          background: "transparent",
+        }}
+        autoComplete="off"
+      />
+    </div>
+  );
+}
+
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<ContactFormData>({
     fullName: "",
@@ -68,7 +124,6 @@ const ContactForm: React.FC = () => {
     <>
       <section
         className="relative w-full min-h-[920px] flex justify-center text-white overflow-hidden"
-        style={{ paddingTop: "218.5px" }}
       >
         {/* VIDEO DI SFONDO */}
         <video
@@ -90,6 +145,7 @@ const ContactForm: React.FC = () => {
         <div
           className="relative z-20 w-full max-w-[1440px] px-[40px] pt-[0px] pb-[40px] box-border flex gap-[142px]"
           style={{
+            marginTop: 236,
             minHeight: "920px",
             marginBottom: 0,
           }}
@@ -197,99 +253,88 @@ const ContactForm: React.FC = () => {
           </div>
 
           {/* COLONNA DESTRA – FORM */}
-          {/* COLONNA DESTRA – FORM */}
-
-          {/* RIGHT COLUMN - FORM */}
-          <div className="w-[550px]">
-            <form onSubmit={handleSubmit} className="w-full flex flex-col gap-[24px]">
-              
-              {/* Nome E Cognome */}
-              <div className="flex flex-col">
-                <span className="text-[12px] leading-[18px] text-white mb-[4px]">
-                  Nome E Cognome
-                </span>
-                <input
-                  type="text"
-                  name="fullName"
-                  value={formData.fullName}
-                  onChange={handleChange}
-                  placeholder="Inserisci il tuo nome completo"
-                  className="w-full bg-transparent text-white placeholder-white/40 text-[14px] leading-[22px] h-[48px] border-b border-white focus:border-white outline-none transition-colors duration-200"
-                  required
-                />
-              </div>
-
-              {/* Email */}
-              <div className="flex flex-col">
-                <span className="text-[12px] leading-[18px] text-white mb-[4px]">
-                  Email
-                </span>
-                <input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  placeholder=""
-                  className="w-full bg-transparent text-white placeholder-white/40 text-[14px] leading-[22px] h-[48px] border-b border-white focus:border-white outline-none transition-colors duration-200"
-                  required
-                />
-              </div>
-
-              {/* Numero Di Telefono */}
-              <div className="flex flex-col">
-                <span className="text-[12px] leading-[18px] text-white mb-[4px]">
-                  Numero Di Telefono
-                </span>
-                <input
-                  type="tel"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  placeholder=""
-                  className="w-full bg-transparent text-white placeholder-white/40 text-[14px] leading-[22px] h-[48px] border-b border-white focus:border-white outline-none transition-colors duration-200"
-                />
-              </div>
-
-              {/* Messaggio */}
-              <div className="flex flex-col">
-                <span className="text-[12px] leading-[18px] text-white mb-[4px]">
-                  Messaggio
-                </span>
-                <input
-                  type="text"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  placeholder=""
-                  className="w-full bg-transparent text-white placeholder-white/40 text-[14px] leading-[22px] h-[48px] border-b border-white focus:border-white outline-none transition-colors duration-200"
-                />
-              </div>
+          <div
+            className="w-[550px] flex flex-col items-center"
+            style={{
+              minWidth: 550,
+              maxWidth: 550,
+              background: "transparent",
+              padding: "0",
+            }}
+          >
+            <form
+              onSubmit={handleSubmit}
+              className="w-full flex flex-col"
+              style={{
+                width: 550,
+                maxWidth: 550,
+                gap: 0,
+              }}
+            >
+              <FloatingInput
+                label="Nome E Cognome"
+                name="fullName"
+                value={formData.fullName}
+                onChange={handleChange}
+                required
+              />
+              <FloatingInput
+                label="Email"
+                name="email"
+                type="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
+              <FloatingInput
+                label="Numero Di Telefono"
+                name="phone"
+                type="tel"
+                value={formData.phone}
+                onChange={handleChange}
+              />
+              <FloatingInput
+                label="Messaggio"
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+              />
 
               {/* Termini e Condizioni */}
-              <div className="mt-[8px]">
-                <span className="block mb-[8px] font-medium text-[16px] leading-[24px] text-white">
+              <div className="mt-[24px]" style={{ marginBottom: 24 }}>
+                <span
+                  className="block font-medium text-[20px] leading-[28px] text-white mb-[8px]"
+                  style={{
+                    fontFamily: "Host Grotesk, system-ui, sans-serif",
+                    fontWeight: 400,
+                  }}
+                >
                   Termini e Condizioni*
                 </span>
-
-                <label className="flex items-start gap-[12px] cursor-pointer">
+                <label className="flex items-start gap-[16px] cursor-pointer">
                   <div className="relative flex items-center mt-[2px]">
                     <input
                       type="checkbox"
                       name="agreedToTerms"
                       checked={formData.agreedToTerms}
                       onChange={handleCheckboxChange}
-                      className="peer h-[16px] w-[16px] cursor-pointer appearance-none border border-white bg-transparent"
+                      className="peer h-[16px] w-[16px] cursor-pointer appearance-none border border-white bg-transparent rounded-[4px]"
+                      style={{
+                        borderRadius: 4,
+                        border: "1px solid #F5F4F9",
+                        background: "transparent",
+                      }}
                     />
                     <svg
                       className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-white opacity-0 peer-checked:opacity-100 transition-opacity"
-                      width="10"
-                      height="10"
-                      viewBox="0 0 12 12"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        d="M10 3L4.5 8.5L2 6"
+                        d="M12 5L7 10L4 7"
                         stroke="currentColor"
                         strokeWidth="1.5"
                         strokeLinecap="round"
@@ -297,8 +342,14 @@ const ContactForm: React.FC = () => {
                       />
                     </svg>
                   </div>
-
-                  <p className="font-normal text-[12px] leading-[18px] text-white">
+                  <p
+                    className="font-normal text-[16px] leading-[24px] text-white"
+                    style={{
+                      fontFamily: "Host Grotesk, system-ui, sans-serif",
+                      fontWeight: 400,
+                      color: "#F5F4F9",
+                    }}
+                  >
                     Autorizzo il trattamento dei miei dati personali secondo quanto
                     riportato nell&apos;informativa ai sensi del Decreto legislativo
                     30 Giugno 2003, n. 196
@@ -312,11 +363,11 @@ const ContactForm: React.FC = () => {
                 disabled={status === FormStatus.SUBMITTING}
                 className="
                   w-full
-                  h-[56px]
+                  h-[40px]
                   rounded-full
                   bg-[#FFFFFF]
                   text-[#020b2d]
-                  text-[16px]
+                  text-[20px]
                   font-medium
                   tracking-[0.01em]
                   shadow-[0_0_20px_rgba(255,255,255,0.35)]
@@ -325,10 +376,19 @@ const ContactForm: React.FC = () => {
                   active:scale-[0.99]
                   disabled:opacity-70
                   disabled:cursor-not-allowed
-                  mt-2
+                  mt-8
                 "
+                style={{
+                  fontFamily: "Host Grotesk, system-ui, sans-serif",
+                  fontWeight: 400,
+                  padding: "8px 16px",
+                  width: 550,
+                  height: 40,
+                  borderRadius: 24,
+                  marginTop: 16,
+                }}
               >
-                {status === FormStatus.SUBMITTING ? "Invio in corso..." : "Text"}
+                {status === FormStatus.SUBMITTING ? "Invio in corso..." : "Invia messaggio"}
               </button>
 
               {status === FormStatus.SUCCESS && (
