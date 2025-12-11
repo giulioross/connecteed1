@@ -345,7 +345,7 @@ const ContactForm: React.FC = () => {
                         border: "1px solid #F5F4F9",
                         background: "transparent",
                         verticalAlign: "top",
-                        marginTop: 0,
+                        marginTop: 4,
                         marginBottom: 0,
                         display: "block",
                       }}
