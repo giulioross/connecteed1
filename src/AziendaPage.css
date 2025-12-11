@@ -272,7 +272,7 @@
 
 /* Pulsante invia messaggio stile navbar-contact */
 .contact-form-btn {
-  background: rgba(255,255,255,0.9);
+  background: #fff; /* bianco pieno */
   color: #001b66;
   border: 1px solid rgba(255,255,255,0.35);
   height: 40px;
@@ -292,7 +292,7 @@
     transform .10s ease;
   font-weight: 400;
   margin-top: 16px;
-  box-shadow: 0 0 20px rgba(255,255,255,0.35);
+  box-shadow: none; /* rimuove la luminescenza */
   opacity: 1;
 }
 

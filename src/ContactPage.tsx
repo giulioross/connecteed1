@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { ContactFormData, FormStatus } from "./types";
 import Footer from "./Footer";
 import videoBg from "./assets/Composizione1.mp4";
+import markerPin from "./assets/marker-pin-01.svg";
+import mailIcon from "./assets/mail-01.svg";
 
 // Campo input con label animata sopra la linea
 function FloatingInput({
@@ -190,8 +192,8 @@ const ContactForm: React.FC = () => {
 
             {/* CARD – SEDE LEGALE */}
             <div className="w-[668px] border-b border-white/25 pb-[24px] mb-[24px] flex items-start gap-[16px]">
-              <div className="w-[32px] h-[32px] flex items-center justify-center rounded-full border border-white/40 text-[18px]">
-                📍
+              <div className="w-[32px] h-[32px] flex items-center justify-center ">
+                <img src={markerPin} alt="Sede legale" style={{ width: 24, height: 24 }} />
               </div>
               <div>
                 <div
@@ -222,8 +224,8 @@ const ContactForm: React.FC = () => {
 
             {/* CARD – EMAIL */}
             <div className="w-[668px] border-b border-white/25 pb-[24px] flex items-start gap-[16px]">
-              <div className="w-[32px] h-[32px] flex items-center justify-center rounded-full border border-white/40 text-[18px]">
-                ✉️
+              <div className="w-[32px] h-[32px] flex items-center justify-center">
+                <img src={mailIcon} alt="Email" style={{ width: 24, height: 24 }} />
               </div>
               <div>
                 <div
@@ -384,7 +386,7 @@ const ContactForm: React.FC = () => {
         </div>
       </section>
 
-      <Footer noFixedHeight={true} />
+      <Footer />
     </>
   );
 };
