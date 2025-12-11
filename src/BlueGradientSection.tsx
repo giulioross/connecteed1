@@ -28,7 +28,7 @@ export default function BlueGradientSection() {
       <p className="blue-gradient-text">
         Elevare le connessioni, ridefinire l&apos;eccellenza,
         creare soluzioni di lusso per menti <br />ambiziose:
-        rompere gli schemi, ancora una<br /> volta.
+        rompere gli schemi, ancora una volta.
       </p>
     </section>
   );

@@ -52,11 +52,11 @@ function FloatingInput({
           border: "none",
           borderBottom: "2px solid #fff",
           background: "transparent",
-          color: "#fff", // <-- testo digitato bianco
-          // placeholder bianco
+          color: "#fff",
         }}
         autoComplete="off"
-        placeholder={isActive ? "" : label}
+        // Mostra il placeholder solo se la label non è attiva
+        placeholder={isActive ? "" : ""}
       />
     </div>
   );
