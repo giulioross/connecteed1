@@ -123,6 +123,7 @@
   border: 1px solid rgba(255,255,255,0.35);
 
   height: 40px;
+  width: 108px; /* larghezza fissa */
   padding: 8px 16px;
   border-radius: 20px;
 
