@@ -43,7 +43,7 @@ function FloatingInput({
         required={required}
         onFocus={() => setFocused(true)}
         onBlur={() => setFocused(false)}
-        className="w-full bg-transparent text-white text-[18px] leading-[28px] h-[56px] border-b border-white focus:border-white outline-none transition-colors duration-200 px-0"
+        className="w-full bg-transparent text-white text-[16px] leading-[28px] h-[56px] border-b border-white focus:border-white outline-none transition-colors duration-200 px-0"
         style={{
           fontFamily: "Host Grotesk, system-ui, sans-serif",
           fontWeight: 400,
