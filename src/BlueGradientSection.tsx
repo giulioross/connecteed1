@@ -23,9 +23,9 @@ export default function BlueGradientSection() {
   return (
     <section
       ref={ref}
-      className={`blue-section ${visible ? "fade-in" : ""}`}
+      className="blue-section"
     >
-      <p className="blue-gradient-text">
+      <p className={`blue-gradient-text${visible ? " fade-in" : ""}`}>
         Elevare le connessioni, ridefinire l&apos;eccellenza,
         creare soluzioni di lusso per menti <br />ambiziose:
         rompere gli schemi, ancora una volta.

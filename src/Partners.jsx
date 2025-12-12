@@ -68,9 +68,8 @@ export default function Partners() {
                     src={p.logo}
                     alt={p.name + " logo"}
                     className="partner-icon"
-                    style={{ width: 64, height: 64 }}
+                    style={{ width: 152, height: 119 }}
                   />
-                  <span className="partner-name">{p.name}</span>
                 </div>
               ))}
             </div>
@@ -89,9 +88,8 @@ export default function Partners() {
                     src={p.logo}
                     alt={p.name + " logo"}
                     className="partner-icon"
-                    style={{ width: 64, height: 64 }}
+                    style={{ width: 152, height: 119 }}
                   />
-                  <span className="partner-name">{p.name}</span>
                 </div>
               ))}
             </div>

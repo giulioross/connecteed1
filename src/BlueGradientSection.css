@@ -1,3 +1,4 @@
+
 .blue-section {
   position: relative;
   width: 100vw;
@@ -21,18 +22,10 @@
     #9fc3ff 80%,
     #ffffff 100%
   );
-
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 1.2s ease, transform 1.2s ease;
-}
-
-.blue-section.fade-in {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 /* 🎯 TESTO CON DIMENSIONI FISSE 1138 × 256 */
+
 .blue-gradient-text {
   position: relative;
   z-index: 2;
@@ -52,4 +45,12 @@
   color: #F8FAFF;
 
   margin: 0 auto;   /* centra orizzontalmente */
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+.blue-gradient-text.fade-in {
+  opacity: 1;
+  transform: translateY(0);
 }

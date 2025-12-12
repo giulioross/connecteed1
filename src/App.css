@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  background-color: #ffffff;
+  
 }
 
 #root {
@@ -11,8 +11,8 @@ body {
   min-height: 100vh;
   margin: 0;
   padding: 0;
-  text-align: left;    /* niente più centrato ovunque */
-  background-color: #ffffff;
+  text-align: center;    /* niente più centrato ovunque */
+  
 }
 
 .logo {

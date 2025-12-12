@@ -391,61 +391,7 @@ export const WaitlistHero: React.FC = () => {
               Contattaci, sarai servito
             </p>
 
-            {/* FORM */}
-            <form
-              onSubmit={handleSubmit}
-              style={{
-                width: "100%",
-                maxWidth: 520,
-                margin: "0 auto",
-                display: status === "success" ? "none" : "flex",
-                alignItems: "center",
-                background: "#23232a",
-                borderRadius: 32,
-                boxShadow: "0 2px 12px rgba(0,0,0,0.10)",
-                padding: 6,
-              }}
-            >
-              <input
-                type="email"
-                required
-                placeholder="Inserisci la tua email"
-                value={email}
-                disabled={status === "loading"}
-                onChange={(e) => setEmail(e.target.value)}
-                style={{
-                  flex: 1,
-                  height: 56,
-                  border: "none",
-                  outline: "none",
-                  background: "transparent",
-                  color: "#fff",
-                  fontSize: 20,
-                  paddingLeft: 24,
-                  borderRadius: 32,
-                }}
-              />
-              <button
-                type="submit"
-                disabled={status === "loading"}
-                style={{
-                  height: 56,
-                  padding: "0 32px",
-                  borderRadius: 32,
-                  fontWeight: 600,
-                  fontSize: 20,
-                  background: "#0079da",
-                  color: "#fff",
-                  border: "none",
-                  cursor: "pointer",
-                  marginLeft: 0,
-                  boxShadow: "0 2px 12px rgba(0,121,218,0.10)",
-                  transition: "background .2s, transform .1s",
-                }}
-              >
-               Contattaci
-              </button>
-            </form>
+            
           </div>
         </div>
       </div>
