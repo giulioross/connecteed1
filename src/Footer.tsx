@@ -213,7 +213,7 @@ export default function Footer({ noFixedHeight = false }: { noFixedHeight?: bool
         {/* ----------------- BLOCCO INFERIORE ----------------- */}
         <div className="relative w-full flex items-end justify-between">
           {/* Testo legale in basso a sinistra – Regular 16 / 24, Neutral/10 */}
-          <div className="flex flex-col gap-[4px] max-w-[360px] items-start">
+          <div className="flex flex-col gap-[4px]" style={{ textAlign: 'left', maxWidth: 360 }}>
             <span
               style={{
                 fontFamily: "Host Grotesk, system-ui, sans-serif",

@@ -16,107 +16,32 @@ const TerminiCondizioni: React.FC = () => {
           paddingBottom: "159px",
         }}
       >
-      <article className="max-w-4xl mx-auto">
-        {/* Header */}
-        <header className="text-center mb-16">
-          <h1
-            className="mb-4"
-            style={{
-              fontFamily: 'Host Grotesk, sans-serif',
-              fontWeight: 500,
-              fontSize: "56px",
-              lineHeight: "88px",
-              letterSpacing: 0,
-              color: "#0A0A0A"
-            }}
-          >
-            Termini E Condizioni
-          </h1>
-          <p className="text-terms-subtitle text-lg">
-            Termini e condizioni di utilizzo del software SaaS
-          </p>
-        </header>
-
-        {/* Articles */}
-        <div className="space-y-10">
-          {/* Articolo 1 */}
-          <section>
-            <h2 className="text-terms-article font-semibold mb-6">
-              Articolo 1 – Oggetto del Contratto
-            </h2>
-            <div className="space-y-4 text-terms-text text-sm leading-relaxed">
-              <p>
-                1.1 La presente disciplina i termini e le condizioni che regolano
-                l'utilizzo del software fornito in modalità SaaS ("Software") dal
-                fornitore del servizio ("Provider") al soggetto utilizzatore
-                ("Cliente").
-              </p>
-              <p>
-                1.2 L'accesso e l'utilizzo del Software da parte del Cliente
-                comportano l'accettazione integrale e incondizionata delle
-                presenti condizioni contrattuali.
-              </p>
-              <p>
-                1.3 Le caratteristiche tecniche, funzionali e i livelli di
-                servizio del Software sono descritti nella documentazione
-                contrattuale e/o nell'offerta commerciale allegata, che
-                costituiscono parte integrante del presente accordo.
-              </p>
-            </div>
-          </section>
-
-          {/* Articolo 2 */}
-          <section>
-            <h2 className="text-terms-article font-semibold mb-6">
-              Articolo 2 – Disponibilità dei Servizi
-            </h2>
-            <div className="space-y-4 text-terms-text text-sm leading-relaxed">
-              <p>
-                2.1 Il Provider si impegna a garantire la piena operatività e
-                funzionalità del Software per tutta la durata contrattuale, salvo
-                quanto diversamente previsto.
-              </p>
-              <p>
-                2.2 La disponibilità del servizio potrà essere temporaneamente
-                sospesa in caso di:
-              </p>
-              <div className="pl-4 space-y-2">
-                <p>a) interventi di manutenzione programmata o straordinaria;</p>
-                <p>b) inadempimento del Cliente agli obblighi contrattuali;</p>
-                <p>c) eventi di forza maggiore, come definiti al successivo Articolo 14.</p>
-              </div>
-            </div>
-          </section>
-
-          {/* Articolo 3 */}
-          <section>
-            <h2 className="text-terms-article font-semibold mb-6">
-              Articolo 3 – Durata e Recesso
-            </h2>
-            <div className="space-y-4 text-terms-text text-sm leading-relaxed">
-              <p>
-                3.1 La durata del presente contratto è quella stabilita
-                nell'offerta commerciale sottoscritta dal Cliente.
-              </p>
-              <p>
-                3.2 Il Cliente potrà esercitare il diritto di recesso unicamente
-                mediante comunicazione a mezzo PEC, da inviarsi con un preavviso
-                minimo di 60 (sessanta) giorni rispetto alla scadenza del termine
-                contrattuale.
-              </p>
-              <p>
-                3.3 Il mancato esercizio del recesso comporterà il tacito rinnovo
-                del contratto, ove espressamente previsto.
-              </p>
-            </div>
-          </section>
-
+        <article className="max-w-4xl mx-auto">
+          <header className="text-center mb-16">
+            <h1
+              className="mb-4"
+              style={{
+                fontFamily: 'Host Grotesk, sans-serif',
+                fontWeight: 500,
+                fontSize: "72px",
+                lineHeight: "80px",
+                letterSpacing: 0,
+                color: "#010F1C",
+                marginBottom: "24px"
+              }}
+            >
+              Termini E Condizioni
+            </h1>
+            <p className="text-terms-subtitle text-lg">
+              Termini e condizioni di utilizzo del software SaaS
+            </p>
+          </header>
           {/* Articolo 4 */}
           <section>
-            <h2 className="text-terms-article font-semibold mb-6">
+            <h2 className="text-terms-article font-semibold mb-6" style={{ textAlign: 'left' }}>
               Articolo 4 – Corrispettivi e Pagamenti
             </h2>
-            <div className="space-y-4 text-terms-text text-sm leading-relaxed">
+            <div className="space-y-4 text-terms-text text-sm leading-relaxed" style={{ textAlign: 'left' }}>
               <p>
                 4.1 I corrispettivi, le modalità e i termini di pagamento sono
                 indicati nell'offerta economica accettata dal Cliente.
@@ -136,10 +61,10 @@ const TerminiCondizioni: React.FC = () => {
 
           {/* Articolo 5 */}
           <section>
-            <h2 className="text-terms-article font-semibold mb-6">
+            <h2 className="text-terms-article font-semibold mb-6" style={{ textAlign: 'left' }}>
               Articolo 5 – Obblighi Generali del Provider
             </h2>
-            <div className="space-y-4 text-terms-text text-sm leading-relaxed">
+            <div className="space-y-4 text-terms-text text-sm leading-relaxed" style={{ textAlign: 'left' }}>
               <p>Il Provider si impegna a:</p>
               <div className="pl-4 space-y-2">
                 <p>a) garantire la continuità, regolarità e conformità del servizio secondo i livelli concordati;</p>
@@ -151,10 +76,10 @@ const TerminiCondizioni: React.FC = () => {
 
           {/* Articolo 6 */}
           <section>
-            <h2 className="text-terms-article font-semibold mb-6">
+            <h2 className="text-terms-article font-semibold mb-6" style={{ textAlign: 'left' }}>
               Articolo 6 – Supporto e Assistenza Tecnica
             </h2>
-            <div className="space-y-4 text-terms-text text-sm leading-relaxed">
+            <div className="space-y-4 text-terms-text text-sm leading-relaxed" style={{ textAlign: 'left' }}>
               <p>
                 6.1 Il Provider assicura, per tutta la durata contrattuale, i
                 seguenti servizi inclusi nel canone:
@@ -169,10 +94,10 @@ const TerminiCondizioni: React.FC = () => {
 
           {/* Articolo 7 */}
           <section>
-            <h2 className="text-terms-article font-semibold mb-6">
+            <h2 className="text-terms-article font-semibold mb-6" style={{ textAlign: 'left' }}>
               Articolo 7 – Manutenzione e Aggiornamenti
             </h2>
-            <div className="space-y-4 text-terms-text text-sm leading-relaxed">
+            <div className="space-y-4 text-terms-text text-sm leading-relaxed" style={{ textAlign: 'left' }}>
               <p>7.1 La manutenzione ordinaria e straordinaria include:</p>
               <div className="pl-4 space-y-2">
                 <p>interventi correttivi e di tuning del Software;</p>
@@ -183,10 +108,10 @@ const TerminiCondizioni: React.FC = () => {
 
           {/* Articolo 8 */}
           <section>
-            <h2 className="text-terms-article font-semibold mb-6">
+            <h2 className="text-terms-article font-semibold mb-6" style={{ textAlign: 'left' }}>
               Articolo 8 – Garanzie
             </h2>
-            <div className="space-y-4 text-terms-text text-sm leading-relaxed">
+            <div className="space-y-4 text-terms-text text-sm leading-relaxed" style={{ textAlign: 'left' }}>
               <p>
                 8.1 Il Provider garantisce che il Software sarà conforme alle
                 specifiche tecniche sottoscritte.
@@ -205,10 +130,10 @@ const TerminiCondizioni: React.FC = () => {
 
           {/* Articolo 9 */}
           <section>
-            <h2 className="text-terms-article font-semibold mb-6">
+            <h2 className="text-terms-article font-semibold mb-6" style={{ textAlign: 'left' }}>
               Articolo 9 – Proprietà Intellettuale
             </h2>
-            <div className="space-y-4 text-terms-text text-sm leading-relaxed">
+            <div className="space-y-4 text-terms-text text-sm leading-relaxed" style={{ textAlign: 'left' }}>
               <p>
                 9.1 Tutti i diritti di proprietà intellettuale e industriale
                 relativi al Software, ivi inclusi codice sorgente, documentazione,
@@ -225,10 +150,10 @@ const TerminiCondizioni: React.FC = () => {
 
           {/* Articolo 10 */}
           <section>
-            <h2 className="text-terms-article font-semibold mb-6">
+            <h2 className="text-terms-article font-semibold mb-6" style={{ textAlign: 'left' }}>
               Articolo 10 – Backup, Sicurezza e Responsabilità sui Dati
             </h2>
-            <div className="space-y-4 text-terms-text text-sm leading-relaxed">
+            <div className="space-y-4 text-terms-text text-sm leading-relaxed" style={{ textAlign: 'left' }}>
               <p>
                 10.1 Il Provider esegue backup periodici secondo le proprie policy
                 interne, salvo diverso accordo scritto.
@@ -250,10 +175,10 @@ const TerminiCondizioni: React.FC = () => {
 
           {/* Articolo 11 */}
           <section>
-            <h2 className="text-terms-article font-semibold mb-6">
+            <h2 className="text-terms-article font-semibold mb-6" style={{ textAlign: 'left' }}>
               Articolo 11 – Strumenti di Terze Parti
             </h2>
-            <div className="space-y-4 text-terms-text text-sm leading-relaxed">
+            <div className="space-y-4 text-terms-text text-sm leading-relaxed" style={{ textAlign: 'left' }}>
               <p>
                 11.1 Il Provider non è responsabile di interruzioni o
                 malfunzionamenti derivanti da software, API, servizi di hosting o
@@ -269,10 +194,10 @@ const TerminiCondizioni: React.FC = () => {
 
           {/* Articolo 12 */}
           <section>
-            <h2 className="text-terms-article font-semibold mb-6">
+            <h2 className="text-terms-article font-semibold mb-6" style={{ textAlign: 'left' }}>
               Articolo 12 – Riservatezza
             </h2>
-            <div className="space-y-4 text-terms-text text-sm leading-relaxed">
+            <div className="space-y-4 text-terms-text text-sm leading-relaxed" style={{ textAlign: 'left' }}>
               <p>
                 12.1 Le Parti si impegnano a mantenere strettamente riservate tutte
                 le informazioni commerciali, tecniche e strategiche apprese in
@@ -287,10 +212,10 @@ const TerminiCondizioni: React.FC = () => {
 
           {/* Articolo 13 */}
           <section>
-            <h2 className="text-terms-article font-semibold mb-6">
+            <h2 className="text-terms-article font-semibold mb-6" style={{ textAlign: 'left' }}>
               Articolo 13 – Forza Maggiore
             </h2>
-            <div className="space-y-4 text-terms-text text-sm leading-relaxed">
+            <div className="space-y-4 text-terms-text text-sm leading-relaxed" style={{ textAlign: 'left' }}>
               <p>
                 13.1 Nessuna delle Parti sarà ritenuta responsabile per
                 inadempimenti dovuti a eventi imprevisti e non imputabili alla
@@ -303,10 +228,10 @@ const TerminiCondizioni: React.FC = () => {
 
           {/* Articolo 14 */}
           <section>
-            <h2 className="text-terms-article font-semibold mb-6">
+            <h2 className="text-terms-article font-semibold mb-6" style={{ textAlign: 'left' }}>
               Articolo 14 – Comunicazioni
             </h2>
-            <div className="space-y-4 text-terms-text text-sm leading-relaxed">
+            <div className="space-y-4 text-terms-text text-sm leading-relaxed" style={{ textAlign: 'left' }}>
               <p>
                 14.1 Tutte le comunicazioni ufficiali e aventi rilevanza giuridica
                 o contabile dovranno avvenire esclusivamente a mezzo PEC
@@ -321,10 +246,10 @@ const TerminiCondizioni: React.FC = () => {
 
           {/* Articolo 15 */}
           <section>
-            <h2 className="text-terms-article font-semibold mb-6">
+            <h2 className="text-terms-article font-semibold mb-6" style={{ textAlign: 'left' }}>
               Articolo 15 – Clausola di Salvaguardia
             </h2>
-            <div className="space-y-4 text-terms-text text-sm leading-relaxed">
+            <div className="space-y-4 text-terms-text text-sm leading-relaxed" style={{ textAlign: 'left' }}>
               <p>
                 15.1 L'eventuale nullità o inefficacia di una o più disposizioni
                 del presente contratto non pregiudica la validità delle restanti
@@ -335,10 +260,10 @@ const TerminiCondizioni: React.FC = () => {
 
           {/* Articolo 16 */}
           <section>
-            <h2 className="text-terms-article font-semibold mb-6">
+            <h2 className="text-terms-article font-semibold mb-6" style={{ textAlign: 'left' }}>
               Articolo 16 – Richieste Extra Contrattuali
             </h2>
-            <div className="space-y-4 text-terms-text text-sm leading-relaxed">
+            <div className="space-y-4 text-terms-text text-sm leading-relaxed" style={{ textAlign: 'left' }}>
               <p>
                 16.1 Qualsiasi attività aggiuntiva rispetto a quelle previste,
                 incluse personalizzazioni, nuove funzionalità o modifiche, sarà
@@ -350,10 +275,10 @@ const TerminiCondizioni: React.FC = () => {
 
           {/* Articolo 17 */}
           <section>
-            <h2 className="text-terms-article font-semibold mb-6">
+            <h2 className="text-terms-article font-semibold mb-6" style={{ textAlign: 'left' }}>
               Articolo 17 – Obblighi del Cliente
             </h2>
-            <div className="space-y-4 text-terms-text text-sm leading-relaxed">
+            <div className="space-y-4 text-terms-text text-sm leading-relaxed" style={{ textAlign: 'left' }}>
               <p>Il Cliente si impegna a:</p>
               <div className="pl-4 space-y-2">
                 <p>a) fornire tempestivamente tutte le informazioni e i materiali necessari al corretto funzionamento del servizio;</p>
@@ -365,10 +290,10 @@ const TerminiCondizioni: React.FC = () => {
 
           {/* Articolo 18 */}
           <section>
-            <h2 className="text-terms-article font-semibold mb-6">
+            <h2 className="text-terms-article font-semibold mb-6" style={{ textAlign: 'left' }}>
               Articolo 18 – Limitazioni di Responsabilità
             </h2>
-            <div className="space-y-4 text-terms-text text-sm leading-relaxed">
+            <div className="space-y-4 text-terms-text text-sm leading-relaxed" style={{ textAlign: 'left' }}>
               <p>18.1 Il Provider non sarà responsabile per:</p>
               <div className="pl-4 space-y-2">
                 <p>a) modifiche o interventi non autorizzati sul Software da parte del Cliente o di terzi;</p>
@@ -383,10 +308,10 @@ const TerminiCondizioni: React.FC = () => {
 
           {/* Articolo 19 */}
           <section>
-            <h2 className="text-terms-article font-semibold mb-6">
+            <h2 className="text-terms-article font-semibold mb-6" style={{ textAlign: 'left' }}>
               Articolo 19 – Foro Competente
             </h2>
-            <div className="space-y-4 text-terms-text text-sm leading-relaxed">
+            <div className="space-y-4 text-terms-text text-sm leading-relaxed" style={{ textAlign: 'left' }}>
               <p>
                 19.1 Per qualsiasi controversia relativa all'interpretazione,
                 esecuzione o validità del presente contratto sarà competente, in
@@ -394,13 +319,12 @@ const TerminiCondizioni: React.FC = () => {
               </p>
             </div>
           </section>
-        </div>
-      </article>
-    </main>
-    
-   {/* 👇 Footer aggiunto qui */}
+        </article>
+
+      </main>
+      {/* 👇 Footer aggiunto qui */}
       <Footer />
-    </>
+    </> 
   );
 };
 
