@@ -90,11 +90,19 @@
 }
 
 /* ANIMAZIONI – invariate */
+
 .partners-slider {
   display: flex;
   gap: 32px;
   animation: partners-scroll 32s linear infinite;
   width: max-content;
+}
+
+.partners-slider:hover,
+.partners-slider:has(.partner-card:hover),
+.partners-slider-alt:hover,
+.partners-slider-alt:has(.partner-card:hover) {
+  animation-play-state: paused;
 }
 
 .partners-slider-alt {
@@ -124,9 +132,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 119px;
-  padding: 39.39px 24px;
-  min-width: unset;
+  width: 252px;
+  height: 123px;
+  padding: 0;
   border: 1px solid #eeeeee;
   transition: box-shadow 0.2s;
 }
