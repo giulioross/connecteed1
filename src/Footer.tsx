@@ -33,16 +33,17 @@ function SocialBtn({
 
 export default function Footer({ noFixedHeight = false }: { noFixedHeight?: boolean } = {}) {
   return (
-    <footer
-      className={`w-full bg-[linear-gradient(180deg,#050608_0%,#2b3c6a_100%)] text-white flex justify-center overflow-hidden`}
-      style={{
-        fontFamily: 'Host Grotesk, system-ui, sans-serif',
-        backgroundImage: `url(${footerBg})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
-    >
+<footer
+  className="w-full text-white flex justify-center overflow-hidden"
+  style={{
+    fontFamily: "Host Grotesk, system-ui, sans-serif",
+    background: `
+      radial-gradient(circle at right bottom, rgb(123, 152, 231) 13%, rgb(0, 61, 214) 36%, rgb(1, 15, 28) 69%, rgb(1, 15, 28) 80%)
+    `,
+  }}
+>
+
+
       {/* FRAME 1440 × 746 */}
       <div className="w-full h-full max-w-[1440px] px-[40px] pt-[40px] pb-[40px] box-border flex flex-col justify-between">
         {/* ----------------- BLOCCO SUPERIORE ----------------- */}

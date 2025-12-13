@@ -17,6 +17,26 @@ function FloatingInput({
 }) {
   const [focused, setFocused] = useState(false);
   const isActive = focused || value;
+  // Placeholder contestuale per ogni campo
+  let contextualPlaceholder = "";
+  if (isActive && !value) {
+    switch (name) {
+      case "fullName":
+        contextualPlaceholder = "Inserisci nome e cognome";
+        break;
+      case "email":
+        contextualPlaceholder = "Inserisci email";
+        break;
+      case "phone":
+        contextualPlaceholder = "Inserisci numero di telefono";
+        break;
+      case "message":
+        contextualPlaceholder = "Inserisci il messaggio";
+        break;
+      default:
+        contextualPlaceholder = "";
+    }
+  }
 
   return (
     <div style={{ position: "relative", marginBottom: 32 }}>
@@ -37,30 +57,65 @@ function FloatingInput({
       >
         {label}
       </label>
-      <input
-        id={name}
-        name={name}
-        type={type}
-        value={value}
-        onChange={onChange}
-        required={required}
-        onFocus={() => setFocused(true)}
-        onBlur={() => setFocused(false)}
-        className="w-full bg-transparent text-white text-[16px] leading-[28px] h-[56px] border-b border-white focus:border-white outline-none transition-colors duration-200 px-0"
-        style={{
-          fontFamily: "Host Grotesk, system-ui, sans-serif",
-          fontWeight: 400,
-          fontSize: 20,
-          lineHeight: "28px",
-          border: "none",
-          borderBottom: "2px solid #fff",
-          background: "transparent",
-          color: "#fff",
-        }}
-        autoComplete="off"
-        // Mostra il placeholder solo se la label non è attiva
-        placeholder={isActive ? "" : ""}
-      />
+      {name === "message" ? (
+        <>
+          <style>{`
+            /* Nascondi scrollbar per textarea messaggio */
+            .no-scrollbar::-webkit-scrollbar { display: none; }
+            .no-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
+          `}</style>
+          <textarea
+            id={name}
+            name={name}
+            value={value}
+            onChange={onChange}
+            required={required}
+            onFocus={() => setFocused(true)}
+            onBlur={() => setFocused(false)}
+            className="w-full bg-transparent text-white text-[16px] leading-[28px] min-h-[56px] max-h-[200px] border-b border-white focus:border-white outline-none transition-colors duration-200 px-0 resize-y no-scrollbar"
+            style={{
+              fontFamily: "Host Grotesk, system-ui, sans-serif",
+              fontWeight: 400,
+              fontSize: 20,
+              lineHeight: "28px",
+              border: "none",
+              borderBottom: "2px solid #fff",
+              background: "transparent",
+              color: "#fff",
+              paddingTop: 8,
+              paddingBottom: 8,
+              resize: "vertical",
+              overflowY: "auto",
+            }}
+            autoComplete="off"
+            placeholder={contextualPlaceholder}
+          />
+        </>
+      ) : (
+        <input
+          id={name}
+          name={name}
+          type={type}
+          value={value}
+          onChange={onChange}
+          required={required}
+          onFocus={() => setFocused(true)}
+          onBlur={() => setFocused(false)}
+          className="w-full bg-transparent text-white text-[16px] leading-[28px] h-[56px] border-b border-white focus:border-white outline-none transition-colors duration-200 px-0"
+          style={{
+            fontFamily: "Host Grotesk, system-ui, sans-serif",
+            fontWeight: 400,
+            fontSize: 20,
+            lineHeight: "28px",
+            border: "none",
+            borderBottom: "2px solid #fff",
+            background: "transparent",
+            color: "#fff",
+          }}
+          autoComplete="off"
+          placeholder={contextualPlaceholder}
+        />
+      )}
     </div>
   );
 }

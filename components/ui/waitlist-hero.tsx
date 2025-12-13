@@ -108,7 +108,7 @@ export const WaitlistHero: React.FC = () => {
       className="w-full min-h-screen bg-black flex items-center justify-center"
       style={{ fontFamily: 'Host Grotesk, sans-serif' }}
     >
-      {/* Animation Styles */}
+      {/* Animation & Responsive Styles */}
       <style>{`
         @keyframes spin-slow {
           from { transform: rotate(0deg); }
@@ -177,18 +177,62 @@ export const WaitlistHero: React.FC = () => {
         .-rotate-x-90 {
           transform: rotateX(-90deg);
         }
+
+        /* --- MOBILE VERSION --- */
+        @media (max-width: 480px) {
+          .waitlist-hero-mobile {
+            min-height: 100vh;
+            padding: 0;
+            background: #09090b;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1030px; /* Sposta il contenuto verso sinistra su mobile */
+          }
+          .waitlist-hero-mobile .main-content {
+            width: 100%;
+            max-width: 100vw;
+            padding: 0 12px;
+            box-sizing: border-box;
+            margin: 0;
+          }
+          .waitlist-hero-mobile h2 {
+            font-size: 32px !important;
+            margin-bottom: 12px !important;
+            line-height: 1.15 !important;
+            letter-spacing: -1px !important;
+          }
+          .waitlist-hero-mobile p {
+            font-size: 16px !important;
+            margin-bottom: 20px !important;
+          }
+          .waitlist-hero-mobile .success-canvas {
+            width: 220px !important;
+            height: 220px !important;
+            left: 50% !important;
+            top: 50% !important;
+            transform: translate(-50%, -50%) !important;
+          }
+          .waitlist-hero-mobile .success-state {
+            height: 48px !important;
+            max-width: 90vw !important;
+            border-radius: 20px !important;
+            font-size: 16px !important;
+          }
+        }
       `}</style>
 
       {/* Main Container */}
       <div
-  className="relative flex items-center justify-center w-full h-screen bg-transparent overflow-hidden"
-  style={{
-    fontFamily:
-      'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-    position: "relative",
-    zIndex: 1,
-  }}
->
+        className="waitlist-hero-mobile relative flex items-center justify-center w-full h-screen bg-transparent overflow-hidden"
+        style={{
+          fontFamily:
+            'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+          position: "relative",
+          zIndex: 1,
+        }}
+      >
 
       
         {/* Background Decorative Layer */}
@@ -271,15 +315,13 @@ export const WaitlistHero: React.FC = () => {
 
         {/* Content Container */}
         <div
-          className="w-full flex flex-col items-center justify-center"
+          className="main-content w-full flex flex-col items-center justify-center"
           style={{
             position: "relative",
             zIndex: 2,
           }}
         >
           {/* ICONA CENTRALE */}
-
-          {/* BOX CENTRALE */}
           <div
             style={{
               width: "100%",
@@ -294,8 +336,8 @@ export const WaitlistHero: React.FC = () => {
               alignItems: "center",
             }}
           >
-            {/* SUCCESS STATE */}
             <div
+              className="success-state"
               style={{
                 position: "relative",
                 width: "100%",
@@ -306,6 +348,7 @@ export const WaitlistHero: React.FC = () => {
             >
               <canvas
                 ref={canvasRef}
+                className="success-canvas"
                 style={{
                   position: "absolute",
                   top: "50%",
