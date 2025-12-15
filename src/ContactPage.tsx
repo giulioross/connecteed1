@@ -248,10 +248,10 @@ const ContactForm: React.FC = () => {
 
             {/* CARD – SEDE LEGALE */}
             <div className="w-[668px] border-b border-white/25 pb-[24px] mb-[24px] flex items-start gap-[16px]">
-              <div className="w-[32px] h-[32px] flex items-center justify-center ">
+              <div className="w-[32px] h-[32px] flex items-center justify-center">
                 <img src={markerPin} alt="Sede legale" style={{ width: 24, height: 24 }} />
               </div>
-              <div>
+              <div style={{ textAlign: "left" }}>
                 <div
                   style={{
                     fontFamily: "Host Grotesk, system-ui, sans-serif",
@@ -260,6 +260,7 @@ const ContactForm: React.FC = () => {
                     lineHeight: "24px",
                     color: "#FFFFFF",
                     marginBottom: 2,
+                    textAlign: "left",
                   }}
                 >
                   Sede legale
@@ -271,6 +272,7 @@ const ContactForm: React.FC = () => {
                     fontSize: 14,
                     lineHeight: "22px",
                     color: "#FFFFFF",
+                    textAlign: "left",
                   }}
                 >
                   Via della Conciliazione, 44 00193 – Roma
@@ -283,7 +285,7 @@ const ContactForm: React.FC = () => {
               <div className="w-[32px] h-[32px] flex items-center justify-center">
                 <img src={mailIcon} alt="Email" style={{ width: 24, height: 24 }} />
               </div>
-              <div>
+              <div style={{ textAlign: "left" }}>
                 <div
                   style={{
                     fontFamily: "Host Grotesk, system-ui, sans-serif",
@@ -292,6 +294,7 @@ const ContactForm: React.FC = () => {
                     lineHeight: "24px",
                     color: "#FFFFFF",
                     marginBottom: 2,
+                    textAlign: "left",
                   }}
                 >
                   Email
@@ -305,6 +308,7 @@ const ContactForm: React.FC = () => {
                     lineHeight: "22px",
                     color: "#FFFFFF",
                     textDecoration: "underline",
+                    textAlign: "left",
                   }}
                 >
                   contact@connecteed.com

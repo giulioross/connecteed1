@@ -297,4 +297,3 @@ export default function Footer({ noFixedHeight = false }: { noFixedHeight?: bool
   );
 }
 
-/* Pulsante Social – 48×48, radius 14, bordo bianco al 40%, gap 16 */
