@@ -1,11 +1,12 @@
 
-.comingsoon-bg {
+ .comingsoon-bg {
 	min-height: 100vh;
 	width: 100vw;
 	background: #0b1620;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	/* padding rimossa per mobile */
 }
 
 .comingsoon-center {
@@ -13,31 +14,40 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	max-width: 340px;
+	width: 100%;
+	margin: 0 auto;
+	background: none;
 }
 
 .comingsoon-title {
 	font-family: 'Space Grotesk', 'Host Grotesk', Arial, sans-serif;
-	font-size: 64px;
+	font-size: 48px;
 	font-weight: 400;
 	color: #fff;
-	margin-bottom: 32px;
+	margin-bottom: 24px;
 	text-align: center;
+	word-break: break-word;
 }
 
 .comingsoon-desc {
 	font-family: 'Space Grotesk', 'Host Grotesk', Arial, sans-serif;
-	font-size: 28px;
+	font-size: 18px;
 	font-weight: 400;
 	color: #fff;
-	margin-bottom: 40px;
+	margin-bottom: 32px;
 	text-align: center;
-	line-height: 1.3;
+	line-height: 1.4;
+	word-break: break-word;
 }
 
 .comingsoon-btn {
 	background: rgba(255,255,255,0.9);
 	color: #001b66;
 	border: 1px solid rgba(255,255,255,0.35);
+	height: 40px;
+	width: 100%;
+	max-width: 220px;
 	padding: 8px 16px;
 	border-radius: 20px;
 	font-family: "Host Grotesk", sans-serif;
@@ -52,7 +62,9 @@
 		color .18s ease,
 		transform .10s ease;
 	text-decoration: none !important;
-	margin-top: 8px;
+	margin: 0 auto;
+	margin-bottom: 0;
+	margin-top: 16px;
 	box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
 .comingsoon-btn:hover {
@@ -63,4 +75,25 @@
 	background: #4FA1FF;
 	color: white;
 	transform: scale(0.97);
+}
+@media (min-width: 600px) {
+	.comingsoon-bg {
+		padding: 0 16px;
+	}
+	.comingsoon-title {
+		font-size: 64px;
+		margin-bottom: 32px;
+	}
+	.comingsoon-desc {
+		font-size: 28px;
+		margin-bottom: 40px;
+	}
+	.comingsoon-center {
+		max-width: 600px;
+	}
+	.comingsoon-btn {
+		max-width: 220px;
+		width: 220px;
+		margin-top: 24px;
+	}
 }
