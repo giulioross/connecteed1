@@ -39,7 +39,6 @@ const AboutSection: React.FC = () => {
               src={IMG_RED_WORKSHOP}
               alt="Workshop alla lavagna"
               className="w-full h-full object-cover"
-              style={{ margin: 78 }}
             />
           </div>
 

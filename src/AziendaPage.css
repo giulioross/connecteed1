@@ -431,3 +431,171 @@
 .terminicondizioni section {
   color: #464646 !important;
 }
+/* ===========================
+   MOBILE FIX – AZIENDA PAGE
+   =========================== */
+
+@media (max-width: 768px) {
+
+  /* ROOT */
+  #azienda-page-root {
+    padding: 0 16px 80px !important;
+  }
+
+  /* ---------------------------
+     HERO / ABOUT
+     --------------------------- */
+
+  .about-hero-section {
+    padding-top: 120px !important;
+    padding-bottom: 40px !important;
+  }
+
+  .about-title {
+    font-size: 28px !important;
+    line-height: 36px !important;
+    margin-bottom: 16px !important;
+  }
+
+  .about-intro-text {
+    max-width: 100% !important;
+    font-size: 14px !important;
+    line-height: 22px !important;
+  }
+
+  /* ---------------------------
+     COLLAGE → STACK
+     --------------------------- */
+
+  .about-section-images {
+    height: auto !important;
+    margin-top: 24px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+  }
+
+  .about-section-img.main-img,
+  .about-section-img.grayscale,
+  .about-section-code-img {
+    position: relative !important;
+    width: 100% !important;
+    height: 220px !important;
+    left: 0 !important;
+    top: 0 !important;
+    border-radius: 20px !important;
+  }
+
+  /* ---------------------------
+     STATS
+     --------------------------- */
+
+  .stats-section {
+    margin-top: 40px !important;
+    padding: 32px 0 !important;
+  }
+
+  .stats-row {
+    flex-direction: column !important;
+    gap: 32px !important;
+  }
+
+  .stat-number {
+    font-size: 48px !important;
+  }
+
+  .stat-label {
+    font-size: 16px !important;
+  }
+
+  /* ---------------------------
+     VALUES
+     --------------------------- */
+
+  .values-section {
+    grid-template-columns: 1fr !important;
+    margin-top: 64px !important;
+    row-gap: 24px !important;
+  }
+
+  .values-text {
+    width: 100% !important;
+  }
+
+  .values-text h2 {
+    font-size: 24px !important;
+    line-height: 32px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .values-text p {
+    font-size: 14px !important;
+    line-height: 22px !important;
+  }
+
+  .values-image {
+    height: 220px !important;
+    border-radius: 20px !important;
+  }
+
+  /* ---------------------------
+     APPROACH
+     --------------------------- */
+
+  .approach-section {
+    margin-top: 64px !important;
+    padding: 0 !important;
+  }
+
+  .approach-section .section-title {
+    font-size: 24px !important;
+    line-height: 32px !important;
+    text-align: center !important;
+  }
+
+  .approach-section .flex {
+    flex-direction: column !important;
+    gap: 40px !important;
+  }
+
+  .approach-section h3 {
+    font-size: 18px !important;
+  }
+
+  .approach-section p {
+    font-size: 14px !important;
+    line-height: 22px !important;
+  }
+
+  /* ---------------------------
+     ASPIRATIONS
+     --------------------------- */
+
+  .aspirations-section {
+    margin-top: 80px !important;
+    padding: 0 !important;
+  }
+
+  .aspirations-inner {
+    grid-template-columns: 1fr !important;
+  }
+
+  .aspirations-text {
+    width: 100% !important;
+    padding: 48px 16px !important;
+  }
+
+  .aspirations-text h2 {
+    font-size: 24px !important;
+    line-height: 32px !important;
+  }
+
+  .aspirations-text p {
+    font-size: 14px !important;
+    line-height: 22px !important;
+  }
+
+  .aspirations-image {
+    height: 260px !important;
+  }
+}
