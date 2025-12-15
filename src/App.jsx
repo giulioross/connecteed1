@@ -12,6 +12,7 @@ import Footer from "./Footer.tsx";
 import { ContactForm } from "./ContactPage";
 import AziendaPage from './AziendaPage.tsx';
 import TerminiCondizioni from "./terminicondizioni.tsx";
+import Comingsoon from "./Comingsoon";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
         <Route path="/ContactPage" element={<ContactForm />} />
         <Route path="/Azienda" element={<AziendaPage />} />
         <Route path="/terminicondizioni" element={<TerminiCondizioni />} />
+        <Route path="/Comingsoon" element={<Comingsoon />} />
       </Routes>
     </BrowserRouter>
   );

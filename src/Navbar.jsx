@@ -4,10 +4,10 @@ import logo from "./assets/logo.svg";
 
 const NAV_LINKS = [
   { label: "Azienda", href: "/Azienda" },
-  { label: "Servizi", href: "/Servizi" },
-  { label: "Settori", href: "/Settori" },
-  { label: "Prodotti", href: "/Prodotti" },
-  { label: "I nostri lavori", href: "/Lavori" },
+  { label: "Servizi", href: "/Comingsoon" },
+  { label: "Settori", href: "/Comingsoon" },
+  { label: "Prodotti", href: "/Comingsoon" },
+  { label: "I nostri lavori", href: "/Comingsoon" },
 ];
 
 const Navbar = () => {

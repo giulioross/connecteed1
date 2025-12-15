@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "./assets/Logo (1).svg";
 import footerBg from "./assets/Footer (1).svg";
+import "./Footer.css";
 import {
   LinkedInIcon,
   InstagramIcon,
