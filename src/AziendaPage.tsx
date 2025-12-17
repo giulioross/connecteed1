@@ -49,10 +49,7 @@ const AboutSection: React.FC = () => {
 
           {/* Quarta immagine solo mobile per riempire la griglia */}
           <div className="about-section-img mobile-only shadow-lg">
-            <img
-              src={IMG_RED_WORKSHOP}
-              alt="Workshop mobile extra"
-            />
+           
           </div>
 
           <div className="about-section-code-img shadow-xl">
