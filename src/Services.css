@@ -139,7 +139,7 @@
 
 .service-card-img {
   width: 100%;
-  height: 450px;                   /* da Figma */
+  height: auto;                   /* da Figma */
   border-radius: 8px;
   overflow: hidden;
   margin-bottom: 24px;

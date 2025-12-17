@@ -181,15 +181,19 @@ export const WaitlistHero: React.FC = () => {
         /* --- MOBILE VERSION --- */
         @media (max-width: 480px) {
           .waitlist-hero-mobile {
-            min-height: 100vh;
-            padding: 0;
-            background: #09090b;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin-right: 1030px; /* Sposta il contenuto verso sinistra su mobile */
-          }
+  min-height: 100vh;
+  padding: 0;
+  background: #09090b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 !important;          /* ✅ */
+  width: 100% !important;        /* ✅ */
+  overflow-x: hidden !important; /* ✅ evita scroll orizzontale */
+}
+
           .waitlist-hero-mobile .main-content {
             width: 100%;
             max-width: 100vw;

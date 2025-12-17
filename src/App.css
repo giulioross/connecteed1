@@ -1,8 +1,6 @@
-
 body {
   margin: 0;
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  
 }
 
 #root {
@@ -11,7 +9,6 @@ body {
   min-height: 100vh;
   margin: 0;
   padding: 0;
-  
 }
 
 .logo {

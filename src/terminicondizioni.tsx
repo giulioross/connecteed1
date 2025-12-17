@@ -16,7 +16,7 @@ const TerminiCondizioni: React.FC = () => {
           paddingBottom: "159px",
         }}
       >
-        <article className="max-w-4xl mx-auto">
+        <article className="max-w-4xl mx-auto" style={{color: '#464646'}}>
           <header className="text-center mb-16">
             <h1
               className="mb-4"
@@ -54,7 +54,7 @@ const TerminiCondizioni: React.FC = () => {
           </header>
           {/* Articolo 4 */}
           <section>
-            <h2 className="text-terms-article font-semibold mb-6" style={{ textAlign: 'left' }}>
+            <h2 className="text-terms-article font-semibold mb-6" style={{ textAlign: 'left', color: '#010F1C' }}>
               Articolo 4 – Corrispettivi e Pagamenti
             </h2>
             <div className="space-y-4 text-terms-text text-sm leading-relaxed" style={{ textAlign: 'left' }}>
@@ -77,7 +77,7 @@ const TerminiCondizioni: React.FC = () => {
 
           {/* Articolo 5 */}
           <section>
-            <h2 className="text-terms-article font-semibold mb-6" style={{ textAlign: 'left' }}>
+            <h2 className="text-terms-article font-semibold mb-6" style={{ textAlign: 'left', color: '#010F1C' }}>
               Articolo 5 – Obblighi Generali del Provider
             </h2>
             <div className="space-y-4 text-terms-text text-sm leading-relaxed" style={{ textAlign: 'left' }}>
@@ -92,7 +92,7 @@ const TerminiCondizioni: React.FC = () => {
 
           {/* Articolo 6 */}
           <section>
-            <h2 className="text-terms-article font-semibold mb-6" style={{ textAlign: 'left' }}>
+            <h2 className="text-terms-article font-semibold mb-6" style={{ textAlign: 'left', color: '#010F1C' }}>
               Articolo 6 – Supporto e Assistenza Tecnica
             </h2>
             <div className="space-y-4 text-terms-text text-sm leading-relaxed" style={{ textAlign: 'left' }}>
@@ -110,7 +110,7 @@ const TerminiCondizioni: React.FC = () => {
 
           {/* Articolo 7 */}
           <section>
-            <h2 className="text-terms-article font-semibold mb-6" style={{ textAlign: 'left' }}>
+            <h2 className="text-terms-article font-semibold mb-6" style={{ textAlign: 'left', color: '#010F1C' }}>
               Articolo 7 – Manutenzione e Aggiornamenti
             </h2>
             <div className="space-y-4 text-terms-text text-sm leading-relaxed" style={{ textAlign: 'left' }}>
@@ -124,7 +124,7 @@ const TerminiCondizioni: React.FC = () => {
 
           {/* Articolo 8 */}
           <section>
-            <h2 className="text-terms-article font-semibold mb-6" style={{ textAlign: 'left' }}>
+            <h2 className="text-terms-article font-semibold mb-6" style={{ textAlign: 'left', color: '#010F1C' }}>
               Articolo 8 – Garanzie
             </h2>
             <div className="space-y-4 text-terms-text text-sm leading-relaxed" style={{ textAlign: 'left' }}>
@@ -146,7 +146,7 @@ const TerminiCondizioni: React.FC = () => {
 
           {/* Articolo 9 */}
           <section>
-            <h2 className="text-terms-article font-semibold mb-6" style={{ textAlign: 'left' }}>
+            <h2 className="text-terms-article font-semibold mb-6" style={{ textAlign: 'left', color: '#010F1C' }}>
               Articolo 9 – Proprietà Intellettuale
             </h2>
             <div className="space-y-4 text-terms-text text-sm leading-relaxed" style={{ textAlign: 'left' }}>
@@ -166,7 +166,7 @@ const TerminiCondizioni: React.FC = () => {
 
           {/* Articolo 10 */}
           <section>
-            <h2 className="text-terms-article font-semibold mb-6" style={{ textAlign: 'left' }}>
+            <h2 className="text-terms-article font-semibold mb-6" style={{ textAlign: 'left', color: '#010F1C' }}>
               Articolo 10 – Backup, Sicurezza e Responsabilità sui Dati
             </h2>
             <div className="space-y-4 text-terms-text text-sm leading-relaxed" style={{ textAlign: 'left' }}>
@@ -191,7 +191,7 @@ const TerminiCondizioni: React.FC = () => {
 
           {/* Articolo 11 */}
           <section>
-            <h2 className="text-terms-article font-semibold mb-6" style={{ textAlign: 'left' }}>
+            <h2 className="text-terms-article font-semibold mb-6" style={{ textAlign: 'left', color: '#010F1C' }}>
               Articolo 11 – Strumenti di Terze Parti
             </h2>
             <div className="space-y-4 text-terms-text text-sm leading-relaxed" style={{ textAlign: 'left' }}>
@@ -210,7 +210,7 @@ const TerminiCondizioni: React.FC = () => {
 
           {/* Articolo 12 */}
           <section>
-            <h2 className="text-terms-article font-semibold mb-6" style={{ textAlign: 'left' }}>
+            <h2 className="text-terms-article font-semibold mb-6" style={{ textAlign: 'left', color: '#010F1C' }}>
               Articolo 12 – Riservatezza
             </h2>
             <div className="space-y-4 text-terms-text text-sm leading-relaxed" style={{ textAlign: 'left' }}>
@@ -228,7 +228,7 @@ const TerminiCondizioni: React.FC = () => {
 
           {/* Articolo 13 */}
           <section>
-            <h2 className="text-terms-article font-semibold mb-6" style={{ textAlign: 'left' }}>
+            <h2 className="text-terms-article font-semibold mb-6" style={{ textAlign: 'left', color: '#010F1C' }}>
               Articolo 13 – Forza Maggiore
             </h2>
             <div className="space-y-4 text-terms-text text-sm leading-relaxed" style={{ textAlign: 'left' }}>
@@ -244,7 +244,7 @@ const TerminiCondizioni: React.FC = () => {
 
           {/* Articolo 14 */}
           <section>
-            <h2 className="text-terms-article font-semibold mb-6" style={{ textAlign: 'left' }}>
+            <h2 className="text-terms-article font-semibold mb-6" style={{ textAlign: 'left', color: '#010F1C' }}>
               Articolo 14 – Comunicazioni
             </h2>
             <div className="space-y-4 text-terms-text text-sm leading-relaxed" style={{ textAlign: 'left' }}>
@@ -262,7 +262,7 @@ const TerminiCondizioni: React.FC = () => {
 
           {/* Articolo 15 */}
           <section>
-            <h2 className="text-terms-article font-semibold mb-6" style={{ textAlign: 'left' }}>
+            <h2 className="text-terms-article font-semibold mb-6" style={{ textAlign: 'left', color: '#010F1C' }}>
               Articolo 15 – Clausola di Salvaguardia
             </h2>
             <div className="space-y-4 text-terms-text text-sm leading-relaxed" style={{ textAlign: 'left' }}>
@@ -276,7 +276,7 @@ const TerminiCondizioni: React.FC = () => {
 
           {/* Articolo 16 */}
           <section>
-            <h2 className="text-terms-article font-semibold mb-6" style={{ textAlign: 'left' }}>
+            <h2 className="text-terms-article font-semibold mb-6" style={{ textAlign: 'left', color: '#010F1C' }}>
               Articolo 16 – Richieste Extra Contrattuali
             </h2>
             <div className="space-y-4 text-terms-text text-sm leading-relaxed" style={{ textAlign: 'left' }}>
@@ -291,7 +291,7 @@ const TerminiCondizioni: React.FC = () => {
 
           {/* Articolo 17 */}
           <section>
-            <h2 className="text-terms-article font-semibold mb-6" style={{ textAlign: 'left' }}>
+            <h2 className="text-terms-article font-semibold mb-6" style={{ textAlign: 'left', color: '#010F1C' }}>
               Articolo 17 – Obblighi del Cliente
             </h2>
             <div className="space-y-4 text-terms-text text-sm leading-relaxed" style={{ textAlign: 'left' }}>
@@ -306,7 +306,7 @@ const TerminiCondizioni: React.FC = () => {
 
           {/* Articolo 18 */}
           <section>
-            <h2 className="text-terms-article font-semibold mb-6" style={{ textAlign: 'left' }}>
+            <h2 className="text-terms-article font-semibold mb-6" style={{ textAlign: 'left', color: '#010F1C' }}>
               Articolo 18 – Limitazioni di Responsabilità
             </h2>
             <div className="space-y-4 text-terms-text text-sm leading-relaxed" style={{ textAlign: 'left' }}>
