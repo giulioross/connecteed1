@@ -208,7 +208,7 @@ const ContactForm: React.FC = () => {
         <div
           className="relative z-20 w-full max-w-[1440px] px-[40px] pt-[0px] pb-[40px] box-border flex gap-[142px] contact-form-container"
           style={{
-            marginTop: 236,
+            marginTop: 150,
             minHeight: "920px",
             marginBottom: 0,
           }}
@@ -462,10 +462,29 @@ const ContactForm: React.FC = () => {
               </div>
 
               {/* Button */}
+
               <button
                 type="submit"
                 disabled={status === FormStatus.SUBMITTING}
-                className="contact-form-btn"
+                className="contact-form-btn navbar-contact"
+                style={{
+                  background: "rgba(255,255,255,0.9)",
+                  color: "#001b66",
+                  border: "1px solid rgba(255,255,255,0.35)",
+                  height: 40,
+                  padding: "8px 16px",
+                  borderRadius: 20,
+                  fontFamily: 'Host Grotesk, sans-serif',
+                  fontSize: 16,
+                  lineHeight: "24px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  cursor: "pointer",
+                  transition: "background .18s ease, color .18s ease, transform .10s ease",
+                  minWidth: 0,
+                  width: "auto"
+                }}
               >
                 {status === FormStatus.SUBMITTING ? "Invio in corso..." : "Invia messaggio"}
               </button>
@@ -479,8 +498,35 @@ const ContactForm: React.FC = () => {
           </div>
         </div>
 
-        {/* STILI MOBILE AGGIORNATI CON W-288PX */}
+        {/* STILI MOBILE AGGIORNATI CON W-288PX E STILI BOTTONE */}
         <style>{`
+          .navbar-contact {
+            background: rgba(255,255,255,0.9);
+            color: #001b66;
+            border: 1px solid rgba(255,255,255,0.35);
+            height: 40px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-family: "Host Grotesk", sans-serif;
+            font-size: 16px;
+            line-height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background .18s ease, color .18s ease, transform .10s ease;
+            width: auto;
+            min-width: 0;
+          }
+          .navbar-contact:hover {
+            background: #D7EBFF;
+            color: #001B66;
+          }
+          .navbar-contact:active {
+            background: #4FA1FF;
+            color: white;
+            transform: scale(0.97);
+          }
           @media (max-width: 768px) {
             .contact-form-container {
               flex-direction: column !important;
@@ -602,13 +648,13 @@ const ContactForm: React.FC = () => {
 
             /* Bottone */
             .contact-form-btn {
-              width: 288px !important; /* Il bottone è allineato con gli input */
-              max-width: 100% !important; 
-              height: 56px !important; 
-              font-size: 16px !important;
-              line-height: 24px !important;
-              border-radius: 8px !important;
+              width: 100% !important;
+              max-width: 288px !important;
               margin-top: 8px !important;
+              background: none;
+              border: none;
+              box-shadow: none;
+              padding: 0;
             }
               /* Termini e Condizioni */
              .terms-container { 
