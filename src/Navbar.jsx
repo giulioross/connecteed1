@@ -93,11 +93,11 @@ const Navbar = () => {
                 padding: 12,
               }}
             >
-              <span style={{ display: "block", width: 18, height: 12 }}>
+              <span style={{ display: "block", width: 18, height: 12, borderRadius: 2, position: "relative" }}>
                 <span style={{
                   display: "block",
                   width: 24,
-                  height: 2,
+                  height: 3,
                   background: "#fff",
                   borderRadius: 2,
                   marginTop: 5,
@@ -108,7 +108,7 @@ const Navbar = () => {
                 <span style={{
                   display: "block",
                   width: 24,
-                  height: 2,
+                  height: 3,
                   background: "#fff",
                   borderRadius: 2,
                   marginBottom: 5,
@@ -118,7 +118,7 @@ const Navbar = () => {
                 <span style={{
                   display: "block",
                   width: 24,
-                  height: 2,
+                  height: 3,
                   background: "#fff",
                   borderRadius: 2,
                   transition: "transform .3s",
@@ -168,33 +168,33 @@ const Navbar = () => {
     {/* CONTENUTO CENTRATO */}
     <div className="bs-mobile-body">
       <div className="bs-mobile-links">
-        {NAV_LINKS.map((link) => (
-          <button
-            key={link.label}
-            type="button"
-            className="bs-mobile-link"
-            onClick={() => {
-              setMenuOpen(false);
-              window.location.pathname = link.href; // identico al desktop
-            }}
-          >
-            {link.label}
-          </button>
+        {NAV_LINKS.map((link, idx) => (
+          <React.Fragment key={link.label}>
+            <button
+              type="button"
+              className="bs-mobile-link"
+              onClick={() => {
+                setMenuOpen(false);
+                window.location.pathname = link.href;
+              }}
+            >
+              {link.label}
+            </button>
+            {link.label === "I nostri lavori" && (
+              <button
+                type="button"
+                className="bs-mobile-cta"
+                style={{ marginTop: 12, marginBottom: 0 }}
+                onClick={() => {
+                  setMenuOpen(false);
+                  window.location.pathname = "/ContactPage";
+                }}
+              >
+                Contattaci
+              </button>
+            )}
+          </React.Fragment>
         ))}
-      </div>
-
-      {/* CTA */}
-      <div className="bs-mobile-cta-wrap">
-        <button
-          type="button"
-          className="bs-mobile-cta"
-          onClick={() => {
-            setMenuOpen(false);
-            window.location.pathname = "/ContactPage";
-          }}
-        >
-          Contattaci
-        </button>
       </div>
     </div>
   </div>
