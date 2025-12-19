@@ -1,0 +1,184 @@
+/* =========================
+   ROOT — come nelle altre pagine
+========================= */
+html, body, #root {
+  width: 100vw;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+*, *::before, *::after { box-sizing: border-box; }
+
+/* =========================
+   PAGE WRAPPER (before/after)
+========================= */
+.terms-page {
+  min-height: 100vh;
+  padding-top: 94px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 159px;
+
+  background-image: linear-gradient(180deg, #FFFFFF 0%, #B0DFFF 47%, #D3EFFF 100%);
+
+  position: relative;
+  isolation: isolate;
+  overflow-x: clip;
+}
+
+/* decorazioni: stesso metodo */
+.terms-page::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  display: block;
+}
+
+/* glow alto dx */
+.terms-page::before {
+  width: 520px;
+  height: 520px;
+  top: -180px;
+  right: -200px;
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(0, 61, 214, 0.18),
+    rgba(0, 61, 214, 0) 60%
+  );
+}
+
+/* glow basso sx */
+.terms-page::after {
+  width: 520px;
+  height: 520px;
+  bottom: -220px;
+  left: -220px;
+  background: radial-gradient(
+    circle at 35% 35%,
+    rgba(255, 255, 255, 0.35),
+    rgba(255, 255, 255, 0) 60%
+  );
+}
+
+/* =========================
+   CONTENT
+========================= */
+.terms-article {
+  width: 100%;
+  margin: 0 auto;
+  color: #464646;
+}
+
+.terms-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.terms-title {
+  font-family: "Host Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 72px;
+  line-height: 80px;
+  color: #010F1C;
+  margin: 0 0 24px 0;
+}
+
+.terms-subtitle {
+  font-family: "Host Grotesk", sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 40px;
+  color: #464646;
+
+  max-width: 706px;
+  margin: 0 auto;
+}
+
+/* sezioni */
+.terms-section {
+  margin: 0 0 40px 0;
+}
+
+.terms-article-title {
+  font-family: "Host Grotesk", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 26px;
+  color: #010F1C;
+  margin: 0 0 24px 0;
+  text-align: left;
+}
+
+/* testo */
+.terms-text {
+  font-family: "Host Grotesk", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.8;
+  text-align: left;
+}
+
+.terms-text p {
+  margin: 0 0 16px 0;
+}
+
+/* sotto-lista */
+.terms-list {
+  padding-left: 16px;
+}
+.terms-list p {
+  margin: 0 0 8px 0;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 640px) {
+  .terms-page {
+    padding-top: 94px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 80px;
+  }
+
+  /* decori OFF su mobile */
+  .terms-page::before,
+  .terms-page::after {
+    display: none;
+  }
+
+  .terms-header {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  /* ✅ come Figma */
+  .terms-title {
+    font-size: 52px !important;
+    line-height: 56px !important;
+    color: #010F1C !important;
+    margin: 92px 0 16px 0 !important;
+    font-weight: 500;
+  }
+
+  /* ✅ come Figma */
+  .terms-subtitle {
+    font-size: 32px !important;
+    line-height: 40px !important;
+    color: #464646 !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    font-weight: 400;
+  }
+
+  .terms-article-title {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 16px;
+  }
+
+  .terms-text {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+}

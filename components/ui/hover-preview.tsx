@@ -74,13 +74,22 @@ const styles = `
   }
 
   .text-block {
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
-    line-height: 32px;
-    color: #888;
-    font-weight: 400;
-    letter-spacing: -0.02em;
-    font-family: 'Host Grotesk', system-ui, sans-serif;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  line-height: 32px;
+  color: #BDBDBD;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  font-family: 'Host Grotesk', system-ui, sans-serif;
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .text-block {
+    font-size: 40px;
+    line-height: 48px;
   }
+}
+
 
   @media (max-width: 600px) {
     .text-block {
@@ -316,14 +325,14 @@ export function HoverPreview() {
         <div className="content-container">
           <div className="text-block">
             <p>
-              Sfruttiamo 
+              Sfruttiamo  l’
               <HoverLink
                 previewKey="Connecteed"
                 onHoverStart={handleHoverStart}
                 onHoverMove={handleHoverMove}
                 onHoverEnd={handleHoverEnd}
               >
-             l’ Intelligenza Artificiale
+              Intelligenza Artificiale
               </HoverLink>{" "}
               per automatizzare i processi, velocizzare le attività operative e ottimizzare ogni flusso di lavoro.
             </p>

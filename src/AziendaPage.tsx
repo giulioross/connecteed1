@@ -82,7 +82,7 @@ export default function AziendaPage() {
 
         {/* APPROCCIO */}
         <section className="approach-section">
-          <h2 className="section-title">Il nostro approccio</h2>
+          <h2 className="approccio-titolo">Il nostro approccio</h2>
 
           <div className="approach-steps">
             <div className="approach-step">
@@ -126,9 +126,9 @@ export default function AziendaPage() {
         {/* ASPIRATIONS */}
         <section className="aspirations-section">
           <div className="aspirations-inner">
-            <div className="aspirations-text">
-              <h2 className="section-title">A cosa aspiriamo</h2>
-              <p className="about-intro-text">
+            <div className="">
+              <h2 className="aspiration-titlee">A cosa aspiriamo</h2>
+              <p className="aspirations-paragraph">
                 Vogliamo offrire soluzioni su misura e servizi digitali costruiti
                 intorno ai bisogni reali delle imprese, unendo competenza
                 tecnica, design e supporto continuo. Crediamo in un’innovazione
@@ -136,7 +136,7 @@ export default function AziendaPage() {
                 flessibili che permettono alle aziende di evolversi senza
                 generare valore.
               </p>
-              <p className="about-intro-text">
+              <p className="aspirations-paragraph">
                 I nostri obiettivi si muovono in un ecosistema digitale in cui
                 ogni impresa possa innovare senza limiti, grazie a tecnologie
                 personalizzate e sostenibili che trasformano i processi, liberano

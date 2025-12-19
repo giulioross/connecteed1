@@ -326,7 +326,6 @@ html, body, #root {
     display: flex;
     flex-direction: column;
     justify-content: center; /* centro verticale */
-    align-items: flex-start; /* allineamento a sinistra come ref */
     gap: 32px;
   }
 

@@ -16,7 +16,7 @@
 }
 
 /* ========== DECORAZIONI DESKTOP (stesso metodo) ========== */
-#azienda-page-root::before,
+
 #azienda-page-root::after {
   content: "" !important;
   position: absolute !important;
@@ -48,6 +48,13 @@
     rgba(16, 16, 28, 0) 60%
   ) !important;
 }
+.approccio-titolo {
+  font-size: 24px !important;
+  line-height: 32px !important;
+  font-weight: 600 !important;
+  margin: 69px 0 20px !important;
+  color: #101828 !important;
+}
 
 /* ===========================
    TITOLI
@@ -56,10 +63,16 @@
   font-size: 24px !important;
   line-height: 32px !important;
   font-weight: 600 !important;
-  margin: 0 0 20px !important;
+  margin: 69px 0 20px !important;
   color: #101828 !important;
 }
-
+.aspiration-titlee {
+  font-size: 24px !important;
+  line-height: 32px !important;
+  font-weight: 600 !important;
+  margin: 69px 0 20px !important;
+  color: #101828 !important;
+}
 /* ===========================
    HERO / ABOUT — DESKTOP
    =========================== */
@@ -78,6 +91,13 @@
 }
 
 .about-intro-text {
+  font-size: 14px !important;
+  line-height: 20px !important;
+  color: #667085 !important;
+  max-width: 553px !important;
+  margin: 0 !important;
+}
+.aspiration-paragraph {
   font-size: 14px !important;
   line-height: 20px !important;
   color: #667085 !important;
@@ -173,7 +193,7 @@
    VALORI — DESKTOP
    =========================== */
 .values-section {
-  margin-top: 120px !important;
+  margin-top: 153.5px !important;
   max-width: 1360px !important;
   margin-inline: auto !important;
   display: grid !important;
@@ -234,15 +254,14 @@
   width: 44px !important;
   height: 44px !important;
   border-radius: 999px !important;
-  background: #e9f2ff !important;
   display: grid !important;
   place-items: center !important;
   margin: 0 auto 14px !important;
 }
 
 .approach-icon img {
-  width: 20px !important;
-  height: 20px !important;
+  width: 50px !important;
+  height: 50px !important;
 }
 
 .approach-step-title {
@@ -268,8 +287,7 @@
   transform: translateX(-50%) !important;
   width: 100vw !important;
   background: #0b1a2b !important;
-  color: #ffffff !important;
-  padding: 120px 0 !important;
+  padding: 0 0 !important;
   box-sizing: border-box !important;
   overflow: hidden !important;
 }
@@ -278,7 +296,7 @@
   width: 100% !important;
   max-width: 1440px !important;
   margin: 0 auto !important;
-  padding: 0 40px !important;
+  padding: 0 0 0 40px !important;
   box-sizing: border-box !important;
 
   display: grid !important;
@@ -303,7 +321,6 @@
 
 .aspirations-image {
   width: 100% !important;
-  border-radius: 32px !important;
   overflow: hidden !important;
 }
 
@@ -351,42 +368,84 @@
    MOBILE — LAYOUT DEFINITIVO (identico allo screenshot)
    =========================== */
 @media (max-width: 640px) {
+    .aspiration-paragraph {
+      max-width: 100% !important;
+      font-size: 16px !important;
+      line-height: 24px !important;
+      color: #BDBDBD !important;
+      margin-bottom: 18px !important;
+      padding: 0 16px !important;
+      font-weight: 300 !important;
+      background: none !important;
+      border: none !important;
+      box-shadow: none !important;
+      display: block !important;
+    }
   /* decorazioni OFF su mobile */
   #azienda-page-root::before,
   #azienda-page-root::after {
     display: none !important;
   }
+  .approccio-titolo {
+    font-size: 32px !important;
+  line-height: 40px !important;
+  font-weight: 500 !important;
+  margin: 15px 0 24px 16px !important;
+  color: #101828 !important;
+  text-align: left !important;
+  }
 .section-title {
+  font-size: 32px !important;
+  line-height: 40px !important;
+  font-weight: 500 !important;
+  margin: 0 0 24px 16px !important;
+  color: #101828 !important;
+  text-align: left !important;
+}
+.aspiration-titlee {
   font-size: 24px !important;
   line-height: 32px !important;
-  font-weight: 600 !important;
-  margin: 108px 0 24px !important;
-  color: #101828 !important;
+  font-weight: 400 !important;
+  margin: 0 0 24px 16px !important;
+  color: #F5F4F9 !important;
+  text-align: left !important;
 }
   #azienda-page-root {
-    padding: 0 16px 120px !important;
+    padding: 0 0 0 !important;
   }
 
   /* HERO */
   .about-hero-section {
-    padding-top: 84px !important; /* come nello screen */
+    padding-top: 112px !important; /* come nello screen */
     max-width: 100% !important;
   }
 
   .about-title {
-    font-size: 24px !important;
-    line-height: 32px !important;
-    margin: 0 0 12px !important;
+    font-size: 32px !important;
+    line-height: 40px !important;
+    margin: 0 0 12px 16px !important;
+    font-weight: 500 !important;
+    
   }
 
   .about-intro-text {
     max-width: 100% !important;
-    font-size: 10px !important;
-    line-height: 14px !important;
-    color: #667085 !important;
+    font-size: 16px !important;
+    line-height: 24px !important;
+    color: #464646 !important;
     margin-bottom: 18px !important;
+    padding: 0 16px !important;
+    font-weight: 300 !important;
   }
-
+.aspiration-paragraph {
+    max-width: 100% !important;
+    font-size: 16px !important;
+    line-height: 24px !important;
+    color: #BDBDBD !important;
+    margin-bottom: 18px !important;
+    padding: 0 16px !important;
+    font-weight: 300 !important;
+  }
   /* COLLAGE MOBILE: 2 colonne, 3 blocchi come nello screen */
   .about-section-images {
     position: relative !important;
@@ -439,7 +498,12 @@
   }
 @media (max-width: 640px) {
   /* STATS MOBILE — layout pulito */
-
+.aspirations-image img {
+  width: 100% !important;
+  height: 100vh !important;
+  display: block !important;
+  object-fit: cover !important;
+}
   .stats-section {
     margin: 64px auto 0 !important;
     text-align: center;
@@ -460,14 +524,29 @@
 
   .stat-number {
     font-size: 40px !important;
-    line-height: 1 !important;     /* ✅ numero compatto */
+         /* ✅ numero compatto */
     margin: 0 !important;
+    line-height: 48px !important;
+    font-weight: 400 !important;
   }
 
   .stat-label {
-    margin-top: 32px !important;    /* ✅ testo attaccato al numero */
-    font-size: 10px !important;
-    line-height: 14px !important;
+    font-size: 24px !important;
+    line-height: 32px !important;
+    font-weight: 400 !important;
+    position: relative;
+    margin-bottom: 32px !important;
+  }
+
+  .stat-label::after {
+    content: "";
+    display: block;
+    width: 100vw;
+    height: 2px;
+    background: #e5e7eb;
+    border-radius: 2px;
+    margin: 32px auto 0 auto;
+    max-width: 90%;
   }
 }
 
@@ -487,14 +566,15 @@
   }
 
   .values-image {
-    height: 210px !important;
+    height: 335px !important;
     border-radius: 16px !important;
+    padding: 0 16px !important;
   }
 
   /* APPROCCIO MOBILE: verticale con spazi come screen */
   .approach-section {
     margin-top: 48px !important;
-    margin-bottom: 56px !important;
+    margin-bottom: 82px !important;
   }
 
   .approach-steps {
@@ -505,34 +585,39 @@
   }
 
   .approach-icon {
-    width: 34px !important;
-    height: 34px !important;
     margin-bottom: 10px !important;
   }
 
   .approach-icon img {
-    width: 16px !important;
-    height: 16px !important;
+    width: 50px !important;
+    height: 50px !important;
+    margin-bottom: 24px !important;
+    align-items: center !important;
   }
 
   .approach-step-title {
-    font-size: 10px !important;
-    line-height: 14px !important;
-    margin-bottom: 6px !important;
+    font-size: 20px !important;
+    line-height: 28px !important;
+    margin-top: 24px !important;
+    font-weight: 400 !important;
+
   }
 
   .approach-step-text {
-    font-size: 8px !important;
-    line-height: 12px !important;
+    font-size: 16px !important;
+    line-height: 24px !important;
+    font-weight: 300 !important;
+    padding: 0 16px !important;
   }
 
   /* ASPIRAZIONI MOBILE: full-bleed, testo sopra, immagine sotto */
   .aspirations-section {
     padding: 40px 0 !important;
+    height: 1117px !important;
   }
 
   .aspirations-inner {
-    padding: 0 16px !important;
+    padding: 0 !important;
     grid-template-columns: 1fr !important;
     gap: 20px !important;
   }
@@ -550,7 +635,8 @@
   }
 
   .aspirations-image {
-    border-radius: 16px !important;
+    border-radius: 0 !important;
+
   }
 }
 
