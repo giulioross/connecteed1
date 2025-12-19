@@ -10,12 +10,14 @@ import {
 function SocialBtn({
   children,
   label,
+  href
 }: {
   children: React.ReactNode;
   label: string;
+  href: string;
 }) {
   return (
-    <a href="#" aria-label={label} className="social-btn">
+    <a href={href} aria-label={label} className="social-btn" target="_blank" rel="noopener noreferrer">
       <div className="social-icon">{children}</div>
     </a>
   );
@@ -110,13 +112,13 @@ export default function Footer() {
           </div>
           <div className="footer-socials">
             <div className="flex gap-[16px]">
-              <SocialBtn label="LinkedIn">
+              <SocialBtn label="LinkedIn" href="https://www.linkedin.com/company/connecteed/product/">
                 <LinkedInIcon />
               </SocialBtn>
-              <SocialBtn label="Instagram">
+              <SocialBtn label="Instagram" href="https://www.instagram.com/connecteed.it/">
                 <InstagramIcon />
               </SocialBtn>
-              <SocialBtn label="Facebook">
+              <SocialBtn label="Facebook" href="https://www.facebook.com/profile.php?id=61552167357765">
                 <FacebookIcon />
               </SocialBtn>
             </div>

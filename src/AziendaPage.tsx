@@ -30,19 +30,18 @@ export default function AziendaPage() {
             reciproco e nella diversità di pensiero come motore di innovazione.
           </p>
 
-          <div className="about-section-images">
-            <div className="about-section-code-img">
-              <img src={ImgCode} alt="Schermo con codice" />
-            </div>
+        <div className="about-section-images expand-hover">
+  {[ImgCode, ImgRed, ImgDesk].map((img, index) => (
+    <div
+      key={index}
+      className="expand-item"
+    >
+      <img src={img} alt={`Azienda immagine ${index + 1}`} />
+    </div>
+  ))}
+</div>
 
-            <div className="about-section-img main-img">
-              <img src={ImgRed} alt="Workshop alla lavagna" />
-            </div>
 
-            <div className="about-section-img grayscale">
-              <img src={ImgDesk} alt="Desk ufficio" />
-            </div>
-          </div>
         </section>
 
         {/* STATS */}
