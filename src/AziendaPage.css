@@ -21,7 +21,7 @@ html, body, #root {
   isolation: isolate;
 }
 
-#azienda-page-root::before,
+
 #azienda-page-root::after {
   content: "";
   position: absolute;
@@ -50,7 +50,7 @@ html, body, #root {
    HERO
 =========================== */
 .about-hero-section {
-  max-width: 1360px;
+ 
   margin: 0 auto;
   padding-top: 140px;
 }
@@ -71,6 +71,14 @@ html, body, #root {
   margin: 0;
   font-weight: 300;
 }
+.pd {
+  font-size: 20px;
+  line-height: 28px;
+  color: #667085;
+  max-width: 553px;
+  margin: 0;
+  font-weight: 300;
+}
 
 /* ===========================
    IMMAGINI — Desktop: Expand Hover
@@ -83,7 +91,7 @@ html, body, #root {
     display: flex;
     gap: 8px;
     height: 360px;
-    max-width: 1360px;
+    max-width: 100%;
     margin-top: 40px;
   }
 
@@ -163,7 +171,7 @@ html, body, #root {
    STATS
 =========================== */
 .stats-section {
-  max-width: 1360px;
+  
   margin: 80px auto 0;
 }
 
@@ -337,7 +345,7 @@ html, body, #root {
    TABLET
 =========================== */
 @media (max-width: 900px) {
-  #azienda-page-root { padding: 0 20px 140px; }
+  #azienda-page-root { padding: 0 20px 0; }
 
   .about-hero-section { padding-top: 120px; }
 
@@ -369,7 +377,7 @@ html, body, #root {
   .about-hero-section { padding-top: 112px; }
   .about-title { font-size: 32px; line-height: 40px; margin: 0 0 12px 16px; font-weight: 500; }
   .about-intro-text { font-size: 16px; line-height: 24px; color: #464646; }
-
+.pd { font-size: 16px; line-height: 24px; color: #464646; padding: 0 0 0 16px;}
   /* stats mobile */
   .stats-row {
     flex-direction: column;

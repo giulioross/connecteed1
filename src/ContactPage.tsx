@@ -451,7 +451,7 @@ const ContactForm: React.FC = () => {
               style={{
                 width: 668,
                 fontFamily: "Host Grotesk, system-ui, sans-serif",
-                fontWeight: 600,
+                fontWeight: 500,
                 fontSize: 40,
                 lineHeight: "48px",
                 color: "#FFFFFF",
@@ -490,7 +490,7 @@ const ContactForm: React.FC = () => {
                   className="contact-info-title"
                   style={{
                     fontFamily: "Host Grotesk, system-ui, sans-serif",
-                    fontWeight: 600,
+                    fontWeight: 400,
                     fontSize: 16,
                     lineHeight: "24px",
                     color: "#FFFFFF",
@@ -503,7 +503,7 @@ const ContactForm: React.FC = () => {
                   className="contact-info-value"
                   style={{
                     fontFamily: "Host Grotesk, system-ui, sans-serif",
-                    fontWeight: 400,
+                    fontWeight: 300,
                     fontSize: 14,
                     lineHeight: "22px",
                     color: "#FFFFFF",
@@ -523,7 +523,7 @@ const ContactForm: React.FC = () => {
                   className="contact-info-title"
                   style={{
                     fontFamily: "Host Grotesk, system-ui, sans-serif",
-                    fontWeight: 600,
+                    fontWeight: 400,
                     fontSize: 16,
                     lineHeight: "24px",
                     color: "#FFFFFF",
@@ -537,7 +537,7 @@ const ContactForm: React.FC = () => {
                   className="contact-info-value contact-email-link"
                   style={{
                     fontFamily: "Host Grotesk, system-ui, sans-serif",
-                    fontWeight: 400,
+                    fontWeight: 300,
                     fontSize: 14,
                     lineHeight: "22px",
                     color: "#FFFFFF",

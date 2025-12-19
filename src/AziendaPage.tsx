@@ -23,7 +23,7 @@ export default function AziendaPage() {
         <section className="about-hero-section">
           <h1 className="about-title">Qualcosa Su Di Noi</h1>
 
-          <p className="about-intro-text">
+          <p className="pd">
             Persone, idee, risultati. Dietro ogni progetto di successo ci sono
             persone: voli, storie, idee. Il nostro team è prima di tutto una
             squadra, crediamo nella forza della collaborazione, nell’ascolto
@@ -69,10 +69,7 @@ export default function AziendaPage() {
           <div>
             <h2 className="section-title">I nostri valori</h2>
             <p className="about-intro-text">
-              Persone, idee, risultati. Dietro ogni progetto di successo ci sono
-              persone: voli, storie, idee. Il nostro team è prima di tutto una
-              squadra, crediamo nella forza della collaborazione, nell’ascolto
-              reciproco e nella diversità di pensiero come motore di innovazione.
+              Con Connecteed aiutiamo le aziende a lavorare in un unico ecosistema, eliminando inefficienze e trasformando la complessità in valore. Prodotti, vendite, operations e post-vendita si muovono in perfetta armonia, supportati da una tecnologia potente ma sempre al servizio delle persone. Perché dietro ogni processo ci sono decisioni, relazioni e obiettivi reali. Connecteed connette sistemi, ma soprattutto persone, per permetterti di concentrarti su ciò che conta davvero: far crescere il tuo business.
             </p>
           </div>
 

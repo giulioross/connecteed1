@@ -133,9 +133,16 @@ html, body, #root{
 
 /* Logo */
 .footer-logo{
-  width: clamp(24px, 2.2vw, 75px);
-  height: clamp(24px, 2.2vw, 80px);
+  width: 80px;
+  height: 80px;
   flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+  .footer-logo {
+    width: clamp(24px, 2.2vw, 75px) !important;
+    height: clamp(24px, 2.2vw, 80px) !important;
+  }
 }
 
 /* Titolo */
