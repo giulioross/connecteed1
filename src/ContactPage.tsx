@@ -27,7 +27,7 @@ const pageStyles = `
   }
 
   /* Glow decorativi dietro */
-  .contact-page::before,
+  
   .contact-page::after{
     content:"";
     position:absolute;
@@ -84,9 +84,60 @@ const pageStyles = `
   }
   .navbar-contact:hover { background: #D7EBFF; color: #001B66; }
   .navbar-contact:active { background: #4FA1FF; color: #fff; transform: scale(0.97); }
+/* ===========================================
+   iPAD ONLY (portrait + landscape)
+   641px – 1024px
+   NON tocca desktop, NON tocca mobile
+   =========================================== */
+@media (min-width: 641px) and (max-width: 1024px) {
+
+  /* layout resta a 2 colonne come desktop */
+  .contact-form-container {
+    gap: 64px;                 /* più stretto del desktop */
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  /* colonne elastiche (desktop aveva width fisse) */
+  .text-column {
+    width: auto !important;
+    max-width: 100% !important;
+    flex: 1 1 0;
+  }
+
+  .form-column {
+    width: auto !important;
+    max-width: 520px !important;
+    min-width: 0 !important;
+    flex: 1 1 0;
+  }
+
+  /* titoli leggermente più compatti, MA desktop resta identico */
+  .contact-title {
+    font-size: 36px !important;
+    line-height: 44px !important;
+  }
+
+  .contact-description {
+    font-size: 18px !important;
+    line-height: 26px !important;
+    min-height: auto !important;
+  }
+
+  /* input full width su iPad */
+  .floating-input-container {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .contact-form {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
 
   /* ============ RESPONSIVE (mobile layout) ============ */
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     /* decori OFF su mobile (come le altre pagine) */
     .contact-page::before,
     .contact-page::after { display: none; }
@@ -259,6 +310,7 @@ const pageStyles = `
     width: 288px !important;
   }
 }
+  
 `;
 
 // Campo input con label animata

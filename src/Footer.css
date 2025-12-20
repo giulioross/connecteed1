@@ -239,6 +239,87 @@ html, body, #root{
   transition: background 0.2s ease;
   position: relative;
 }
+/* =======================================================
+   iPAD ONLY (641px – 1024px)
+   NON tocca desktop
+   NON tocca mobile
+======================================================= */
+@media  (max-width: 1024px) {
+
+  /* contenitore più compatto rispetto al desktop */
+  .footer-container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  /* titolo meno largo (desktop era 883px fissi) */
+  .footer-title {
+    max-width: 640px;
+  }
+
+  /* colonna destra più flessibile */
+  .footer-container > .flex.w-full {
+    gap: 64px;
+  }
+
+  /* menu: mantiene allineamento a destra ma respira */
+  .footer-container nav {
+    gap: 12px;
+  }
+
+  /* legal meno distante dal fondo */
+  .footer-legal-spacing {
+    margin-bottom: clamp(24px, 4vw, 64px);
+  }
+
+  /* copyright resta centrato ma evita overflow */
+  .footer-copyright {
+    max-width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+/* =======================================================
+   iPAD ONLY (641px – 1024px)
+   NON tocca desktop
+   NON tocca mobile
+======================================================= */
+@media  (max-width: 768px) {
+
+  /* contenitore più compatto rispetto al desktop */
+  .footer-container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  /* titolo meno largo (desktop era 883px fissi) */
+  .footer-title {
+    max-width: 640px;
+  }
+
+  /* colonna destra più flessibile */
+  .footer-container > .flex.w-full {
+    gap: 64px;
+  }
+
+  /* menu: mantiene allineamento a destra ma respira */
+  .footer-container nav {
+    gap: 12px;
+  }
+
+  /* legal meno distante dal fondo */
+  .footer-legal-spacing {
+    margin-bottom: clamp(24px, 4vw, 64px);
+  }
+
+  /* copyright resta centrato ma evita overflow */
+  .footer-copyright {
+    max-width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
 
 .social-btn:hover,
 .social-btn:focus { background: #2877ff; }
