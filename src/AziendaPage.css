@@ -95,7 +95,7 @@ html, body, #root {
 =========================== */
 
 /* ✅ Desktop: strip expand */
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   .about-section-images.expand-hover {
     display: flex;
     gap: 8px;
