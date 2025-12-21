@@ -28,17 +28,15 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-container">
         {/* BLOCCO SUPERIORE */}
-        <div className="flex w-full">
+        <div className="footer-top-ordered">
           {/* SINISTRA */}
           <div className="flex-1 flex flex-col items-start">
-
             <div className="footer-header-row mb-[32px]" style={{ flexDirection: 'column', alignItems: 'flex-start', gap: 0 }}>
               <img src={logo} alt="Logo" className="footer-logo" />
-              <h1 className="footer-title" style={{ width: 883, marginTop: 16 }}>
+              <h1 className="footer-title" style={{  marginTop: 16 }}>
                 Tecnologia che Unisce,<br />Automatizza e fa Crescere.
               </h1>
             </div>
-
             <div className="flex flex-col gap-[24px]">
               {/* INDIRIZZO */}
               <div className="flex flex-col gap-[4px]">
@@ -48,7 +46,6 @@ export default function Footer() {
                   00193 – Roma IT
                 </p>
               </div>
-
               {/* CONTATTI */}
               <div className="flex flex-col gap-[4px]">
                 <span className="footer-label">Contatti</span>
@@ -64,10 +61,9 @@ export default function Footer() {
               </div>
             </div>
           </div>
-
-          {/* DESTRA */}
-          <div className="flex flex-col items-end md:w-[181px] w-full">
-            <nav className="flex flex-col items-end md:items-end gap-[16px] w-full md:w-auto">
+          {/* DESTRA: MENU */}
+          <div className="footer-menu-col">
+            <nav className="footer-menu-nav">
               {[
                 "Azienda",
                 "Servizi",

@@ -1,3 +1,40 @@
+/* ===== BLOCCO SUPERIORE ORDINATO ===== */
+.footer-top-ordered {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.footer-menu-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  min-width: 181px;
+}
+
+.footer-menu-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 16px;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .footer-top-ordered {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+  .footer-menu-col,
+  .footer-menu-nav {
+    align-items: center !important;
+    width: 100% !important;
+  }
+}
 /* Nuova struttura ordinata per il blocco inferiore del footer */
 .footer-bottom-ordered {
   width: 100%;
@@ -279,6 +316,7 @@ html, body, #root{
     padding-right: 16px;
   }
 }
+
 /* =======================================================
    iPAD ONLY (641px – 1024px)
    NON tocca desktop

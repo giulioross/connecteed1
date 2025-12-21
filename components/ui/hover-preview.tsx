@@ -7,7 +7,7 @@ const previewData = {
   Connecteed: {
     image: "https://images.unsplash.com/photo-1695144244472-a4543101ef35?w=560&h=320&fit=crop",
     title: "Connecteed",
-    subtitle: "Create stunning AI-generated artwork",
+    subtitle: "AI-powered business automation",
   },
   stable: {
     image: "https://images.unsplash.com/photo-1712002641088-9d76f9080889?w=560&h=320&fit=crop",
