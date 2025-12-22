@@ -37,13 +37,7 @@
 }
 
 /* glow basso a sinistra */
-.services__wrap::after {
-  width: 520px;
-  height: 520px;
-  bottom: -180px;
-  left: -180px;
-  background: radial-gradient(circle at 40% 40%, rgba(16, 16, 28, 0.08), rgba(16, 16, 28, 0) 60%);
-}
+
 
 .services__header {
   max-width: 920px;   /* “colonna” leggibile come articolo */
