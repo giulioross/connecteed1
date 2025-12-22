@@ -8,11 +8,20 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 96px;
   z-index: 100;
   display: flex;
   justify-content: center;
-  background: transparent;
+
+  /* ✅ copre anche la safe-area */
+  height: calc(96px + env(safe-area-inset-top, 0px));
+  padding-top: env(safe-area-inset-top, 0px);
+
+  /* ✅ sposta qui l'effetto glass */
+  background: rgba(8, 12, 20, 0.55);
+  backdrop-filter: blur(18px) saturate(180%);
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
 
   opacity: 0;
   transform: translateY(-20px);
@@ -28,7 +37,6 @@
 /* CONTENITORE INTERNO — 1440 + padding 40, altezza 96 */
 .navbar-glass-inner {
   width: 100%;
-  
   height: 96px;
   margin: 0 auto;
   padding: 0 40px;
@@ -39,12 +47,7 @@
   grid-template-columns: 282.5px 1fr 282.5px; /* SINISTRA | CENTRO | DESTRA */
   align-items: center;
 
-  /* effetto glass */
-  background: rgba(8, 12, 20, 0.55);
-  backdrop-filter: blur(18px) saturate(180%);
-  -webkit-backdrop-filter: blur(18px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  background: transparent;
 }
 
 /* SINISTRA: LOGO (blocco h=40 dentro i 96) */
@@ -370,16 +373,4 @@ html, body, #root {
     cursor: pointer;
   }
 }
-/* iPhone notch / Dynamic Island safe-area */
 
-/* iPhone notch / Dynamic Island */
-/* ===== iPhone notch / Dynamic Island: barra attaccata sopra ===== */
-.navbar-glass {
-  top: 0 !important;
-  height: calc(96px + env(safe-area-inset-top, 0px)) !important;
-  padding-top: env(safe-area-inset-top, 0px) !important;
-}
-
-.navbar-glass-inner {
-  height: 96px !important;
-}
