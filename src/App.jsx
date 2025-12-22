@@ -1,16 +1,10 @@
-import './App.css';
+import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from './Navbar';
-import Hero from './Hero';
-import BlueGradientSection from './BlueGradientSection';
-import BusinessSupport from './BusinessSupport';
-import Services from './Services';
-import { HoverPreview } from '../components/ui/hover-preview';
-import Partners from './Partners';
-import { WaitlistHero } from '../components/ui/waitlist-hero';
-import Footer from "./Footer.tsx";
+import Navbar from "./Navbar";
+import HomePage from "./HomePage";   // ✅ aggiungi questo
+
 import { ContactForm } from "./ContactPage";
-import AziendaPage from './AziendaPage.tsx';
+import AziendaPage from "./AziendaPage.tsx";
 import TerminiCondizioni from "./terminicondizioni.tsx";
 import Comingsoon from "./Comingsoon";
 
@@ -19,18 +13,7 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route path="/" element={
-          <>
-            <Hero />
-            <BlueGradientSection />
-            <BusinessSupport />
-            <Services />
-            <HoverPreview />
-            <Partners />
-            <WaitlistHero />
-            <Footer />
-          </>
-        } />
+        <Route path="/" element={<HomePage />} />  {/* ✅ usa HomePage */}
         <Route path="/ContactPage" element={<ContactForm />} />
         <Route path="/Azienda" element={<AziendaPage />} />
         <Route path="/terminicondizioni" element={<TerminiCondizioni />} />
@@ -40,4 +23,4 @@ function App() {
   );
 }
 
-export default App
+export default App;
