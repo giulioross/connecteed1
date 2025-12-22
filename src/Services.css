@@ -216,10 +216,7 @@
 }
 
 @media (max-width: 480px) {
-  .services__wrap::before,
-  .services__wrap::after {
-    display: none; /* come “decorazioni” che spariscono su mobile */
-  }
+  
 
   .services__title {
     font-size: 20px;

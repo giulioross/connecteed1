@@ -467,7 +467,16 @@ const apiBaseUrl = useMemo(() => {
 
   return (
     <>
-      <style>{pageStyles}</style>
+      <style>{`
+        ${pageStyles}
+        input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+        input[type=number] {
+          -moz-appearance: textfield;
+        }
+      `}</style>
 
       <section className="contact-page relative w-full min-h-[920px] flex justify-center text-white overflow-hidden">
         {/* VIDEO */}
@@ -609,7 +618,7 @@ const apiBaseUrl = useMemo(() => {
               <FloatingInput label="Nome E Cognome" name="fullName" value={formData.fullName} onChange={handleChange} required />
               <FloatingInput label="Azienda" name="company" value={formData.company} onChange={handleChange} />
               <FloatingInput label="Email" name="email" type="email" value={formData.email} onChange={handleChange} required />
-              <FloatingInput label="Numero Di Telefono" name="phone" type="tel" value={formData.phone} onChange={handleChange} required />
+              <FloatingInput label="Numero Di Telefono" name="phone" type="number" value={formData.phone} onChange={handleChange} required pattern="[0-9]*" inputMode="numeric" />
               <FloatingInput label="Messaggio" name="message" value={formData.message} onChange={handleChange} required />
 
               <div className="terms-container mt-[24px]" style={{ marginBottom: 24 }}>
