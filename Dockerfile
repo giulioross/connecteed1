@@ -1,34 +1,31 @@
 # --- Stage 1: Build ---
 FROM node:20-alpine as build-stage
 
-# Imposta la directory di lavoro
 WORKDIR /app
 
-# Copia i file delle dipendenze
 COPY package*.json ./
 
-# Installa le dipendenze
 RUN npm ci
 
-# Copia tutto il resto del codice sorgente
 COPY . .
 
-# Compila il progetto (solitamente crea la cartella /dist)
+# 1. Dichiariamo l'ARGomento che passeremo da terminale
+ARG VITE_API_URL
+
+# 2. Impostiamo la variabile d'ambiente per farla leggere a Vite durante la build
+ENV VITE_API_URL=$VITE_API_URL
+
+# Ora Vite può leggere la variabile mentre compila i file statici
 RUN npm run build
 
 # --- Stage 2: Production ---
 FROM nginx:alpine as production-stage
 
-# Copia i file compilati dallo stage precedente alla cartella di Nginx
-# Vite di default crea la build nella cartella 'dist'.
 COPY --from=build-stage /app/dist /usr/share/nginx/html
-
-# Copia il tuo file di configurazione Nginx personalizzato
-# Questo sovrascrive la configurazione di default del sito
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-# Espone la porta dall'environment file
-EXPOSE ${PORT}  
+# Nginx di default ascolta sulla porta 80 dentro il container.
+# È meglio esporre la 80 qui e mappare la porta esterna quando lanci il container.
+EXPOSE 80
 
-# Avvia Nginx
 CMD ["nginx", "-g", "daemon off;"]
