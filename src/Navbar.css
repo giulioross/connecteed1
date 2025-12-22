@@ -39,12 +39,12 @@
   grid-template-columns: 282.5px 1fr 282.5px; /* SINISTRA | CENTRO | DESTRA */
   align-items: center;
 
-  /* effetto glass */
-  background: rgba(8, 12, 20, 0.55);
-  backdrop-filter: blur(18px) saturate(180%);
-  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  /* navbar opaca */
+  background: #08141a;
   border: 1px solid rgba(255, 255, 255, 0.06);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 
 /* SINISTRA: LOGO (blocco h=40 dentro i 96) */
