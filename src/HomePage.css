@@ -1,6 +1,16 @@
+/* Solo mobile: impedisce che il contenuto vada sopra la navbar */
 @media (max-width: 1200px) {
   .home-page {
     padding-top: calc(96px + env(safe-area-inset-top, 0px));
-    margin-top: 0;
+  }
+}
+
+/* Safari iOS: fix viewport/100vh */
+@supports (-webkit-touch-callout: none) {
+  @media (max-width: 1200px) {
+    .home-page {
+      padding-top: calc(96px + env(safe-area-inset-top, 0px));
+      min-height: 100dvh; /* Safari moderno */
+    }
   }
 }
