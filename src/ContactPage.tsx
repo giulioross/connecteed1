@@ -392,8 +392,7 @@ const ContactForm: React.FC = () => {
 
   // Base URL dal .env di Vite
   const apiBaseUrl = useMemo(() => {
-    const raw = (import.meta as any).env?.VITE_API_URL as string | undefined;
-    return (raw ?? "http://localhost:8086").replace(/\/$/, "");
+    return import.meta.env.VITE_API_URL || "";
   }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
