@@ -392,9 +392,9 @@ const ContactForm: React.FC = () => {
 
   // take the base url from env variable
   const apiBaseUrl = useMemo(() => {
-    return process.env.REACT_APP_API_BASE_URL || "http://localhost:8086";
+    return process.env.VITE_API_URL || "http://localhost:8086";
   }, []);
-  
+
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
