@@ -18,11 +18,11 @@ import shopify from "./assets/partners/shopify.svg";
 const clienti = [
   { name: "Leoniana", logo: leoniana },
  
-  { name: "Bounz", logo: bounz, url: "https://www.bounz.it/" },
-  { name: "LUXR", logo: luxr, url: "https://luxr.com/" },
+  { name: "Bounz", logo: bounz,},
+  { name: "LUXR", logo: luxr,  },
   { name: "Insyde", logo: insyde },
-  { name: "Scicon", logo: scicon, url: "https://www.sciconbike.com/" },
-  { name: "NovaRe", logo: novare, url: "https://www.novaregroup.it/" },
+  { name: "Scicon", logo: scicon,  },
+  { name: "NovaRe", logo: novare, },
 ];
 
 const partner = [
@@ -62,49 +62,10 @@ export default function Partners() {
           <div className="partners-slider-wrapper">
             <div className="partners-slider partners-slider-alt partners-slider">
               {[...clienti, ...clienti].map((p, i) => (
-                <a
-                  className="partner-card"
-                  key={p.name + i}
-                  href={p.url ? p.url : `https://www.google.com/search?q=${encodeURIComponent(p.name)}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  tabIndex={0}
-                >
-                  <img
-                    src={p.logo}
-                    alt={p.name + " logo"}
-                    className={
-                      p.name === "NovaRe"
-                        ? "partner-icon partner-icon-novare"
-                        : p.name === "Eprice"
-                        ? "partner-icon partner-icon-eprice"
-                        : p.name === "Shopify"
-                        ? "partner-icon partner-icon-shopify"
-                        : "partner-icon"
-                    }
-                  />
-                </a>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* PARTNER */}
-        <div className="partners-group partners-group-bottom">
-          <div className="partners-label">E i nostri partner</div>
-
-          <div className="partners-slider-wrapper">
-            <div className="partners-slider partners-slider-alt partners-slider-reverse">
-              {[...partner, ...partner].map((p, i) => (
-                <a
-                  className="partner-card"
-                  key={p.name + i}
-                  href={p.url ? p.url : `https://www.google.com/search?q=${encodeURIComponent(p.name)}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  tabIndex={0}
-                >
-                  {p.logo && (
+                  <div
+                    className="partner-card"
+                    key={p.name + i}
+                  >
                     <img
                       src={p.logo}
                       alt={p.name + " logo"}
@@ -118,9 +79,40 @@ export default function Partners() {
                           : "partner-icon"
                       }
                     />
-                  )}
-                </a>
-              ))}
+                  </div>
+                ))}
+            </div>
+          </div>
+        </div>
+
+        {/* PARTNER */}
+        <div className="partners-group partners-group-bottom">
+          <div className="partners-label">E i nostri partner</div>
+
+          <div className="partners-slider-wrapper">
+            <div className="partners-slider partners-slider-alt partners-slider-reverse">
+              {[...partner, ...partner].map((p, i) => (
+                  <div
+                    className="partner-card"
+                    key={p.name + i}
+                  >
+                    {p.logo && (
+                      <img
+                        src={p.logo}
+                        alt={p.name + " logo"}
+                        className={
+                          p.name === "NovaRe"
+                            ? "partner-icon partner-icon-novare"
+                            : p.name === "Eprice"
+                            ? "partner-icon partner-icon-eprice"
+                            : p.name === "Shopify"
+                            ? "partner-icon partner-icon-shopify"
+                            : "partner-icon"
+                        }
+                      />
+                    )}
+                  </div>
+                ))}
             </div>
           </div>
         </div>
