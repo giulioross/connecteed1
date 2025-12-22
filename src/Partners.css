@@ -175,9 +175,10 @@ html, body, #root {
   animation-direction: reverse;
 }
 
+
 @keyframes partners-scroll {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-50); }
+  100% { transform: translateX(-50%); }
 }
 
 /* FIX: l'animazione deve andare a -50% (percentuale) */
