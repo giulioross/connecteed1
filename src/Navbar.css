@@ -175,27 +175,19 @@
    RESPONSIVE
    ========================= */
 
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
   .navbar-glass-inner {
-    padding: 0 16px; /* come avevi già impostato */
+    padding: 0 16px;
     grid-template-columns: 1fr auto; /* logo | burger */
   }
 
-  .navbar-menu {
-    display: none;
-  }
+  .navbar-menu { display: none; }
+  .navbar-contact-desktop { display: none; }
+  .navbar-burger { display: block !important; }
 
-  .navbar-right {
-    justify-self: end;
-  }
-
-  /* logo mobile un po’ più compatto come nel tuo setup */
-  .navbar-logo {
-    height: 32px;
-    width: 154px;
-    object-fit: contain;
-  }
+  .navbar-right { justify-self: end; }
 }
+
 
 /*
 

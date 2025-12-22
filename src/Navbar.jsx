@@ -204,15 +204,16 @@ const Navbar = () => {
 
       {/* Responsive CSS per mostrare burger solo su mobile */}
       <style>{`
-        @media (max-width: 900px) {
-          .navbar-menu { display: none !important; }
-          .navbar-contact-desktop { display: none !important; }
-          .navbar-burger { display: block !important; }
-        }
-        @media (min-width: 901px) {
-          .navbar-burger { display: none !important; }
-        }
-      `}</style>
+  @media (max-width: 1200px) {
+    .navbar-menu { display: none !important; }
+    .navbar-contact-desktop { display: none !important; }
+    .navbar-burger { display: block !important; }
+  }
+  @media (min-width: 1201px) {
+    .navbar-burger { display: none !important; }
+  }
+`}</style>
+
     </>
   );
 };
