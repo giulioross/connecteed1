@@ -50,10 +50,10 @@ export default function Footer() {
               <div className="flex flex-col gap-[4px]">
                 <span className="footer-label">Contatti</span>
                 <a
-                  href="mailto:contact@connecteed.com"
+                  href="mailto:info@connecteed.com"
                   className="footer-link"
                 >
-                  contact@connecteed.com
+                  info@connecteed.com
                 </a>
                 <span className="footer-text">
                   Pec: progetriosrl@pec.it

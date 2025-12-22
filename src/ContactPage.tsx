@@ -585,7 +585,7 @@ const ContactForm: React.FC = () => {
                   Email
                 </div>
                 <a
-                  href="mailto:contact@connecteed.com"
+                  href="mailto:info@connecteed.com"
                   className="contact-info-value contact-email-link"
                   style={{
                     fontFamily: "Host Grotesk, system-ui, sans-serif",
@@ -596,7 +596,7 @@ const ContactForm: React.FC = () => {
                     textDecoration: "underline",
                   }}
                 >
-                  contact@connecteed.com
+                  info@connecteed.com
                 </a>
               </div>
             </div>
