@@ -193,11 +193,17 @@
 
 /* Regola anti overflow */
 html, body, #root {
-  width: 100vw;
-  max-width: 100vw;
-  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip; /* meglio di hidden su iOS */
   box-sizing: border-box;
 }
+.navbar-glass,
+.navbar-glass-inner {
+  width: 100%;
+  max-width: 100%;
+}
+
 /* =========================
    MOBILE MENU — FULL SCREEN (come richiesto)
    + ::before / ::after
