@@ -8,33 +8,15 @@
   top: 0;
   left: 0;
   width: 100%;
+  height: 96px;
   z-index: 100;
   display: flex;
   justify-content: center;
-
-  /* ✅ copre anche la safe-area */
-  height: calc(96px + env(safe-area-inset-top, 0px));
-  padding-top: env(safe-area-inset-top, 0px);
-
-  /* ✅ sposta qui l'effetto glass */
-  background: rgba(8, 12, 20, 0.45);
-  backdrop-filter: blur(18px) saturate(180%);
-  -webkit-backdrop-filter: blur(18px) saturate(180%);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  background: transparent;
 
   opacity: 0;
   transform: translateY(-20px);
   transition: opacity .4s ease, transform .4s ease;
-}
-@supports (padding-top: env(safe-area-inset-top)) {
-  .navbar-glass {
-    height: calc(96px + env(safe-area-inset-top));
-    padding-top: env(safe-area-inset-top);
-
-    opacity: 0;
-    transform: translateY(-20px);
-    transition: opacity .4s ease, transform .4s ease;
-  }
 }
 
 /* animazione ingresso */
@@ -46,6 +28,7 @@
 /* CONTENITORE INTERNO — 1440 + padding 40, altezza 96 */
 .navbar-glass-inner {
   width: 100%;
+  
   height: 96px;
   margin: 0 auto;
   padding: 0 40px;
@@ -56,7 +39,12 @@
   grid-template-columns: 282.5px 1fr 282.5px; /* SINISTRA | CENTRO | DESTRA */
   align-items: center;
 
-  background: transparent;
+  /* effetto glass */
+  background: rgba(8, 12, 20, 0.55);
+  backdrop-filter: blur(18px) saturate(180%);
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
 }
 
 /* SINISTRA: LOGO (blocco h=40 dentro i 96) */
@@ -201,7 +189,7 @@
 }
 
 
-
+/*
 
 /* Regola anti overflow */
 html, body, #root {
@@ -220,14 +208,13 @@ html, body, #root {
    MOBILE MENU — FULL SCREEN (come richiesto)
    + ::before / ::after
    ========================= */
-@media (max-width: 1200px) {
+@media (max-width: 900px) {
   /* overlay full screen */
   #mobile-menu.bs-mobile-overlay {
     position: fixed;
     inset: 0;
     width: 100vw;
     height: 100vh;
-    padding-top: env(safe-area-inset-top, 0px); /* 👈 QUI */
     z-index: 9999;
     overflow: hidden;
 
@@ -274,18 +261,17 @@ html, body, #root {
 
   /* TOPBAR: stessa identica griglia/padding della navbar chiusa */
   .bs-mobile-topbar {
-  height: calc(96px + env(safe-area-inset-top, 0px));
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: env(safe-area-inset-top, 0px) 16px 0;
-  box-sizing: border-box;
+    height: 96px;         /* uguale navbar */
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 16px;      /* uguale tua navbar mobile */
+    box-sizing: border-box;
 
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: center;
-}
-
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+  }
 
   /* X deve occupare lo stesso “box” del burger */
   .bs-mobile-close {
@@ -310,9 +296,9 @@ html, body, #root {
       height: 3px;
       background: #fff;
       border-radius: 2px;
-        background: #080c14;
-        /* backdrop-filter: blur(18px) saturate(180%); */
-        /* -webkit-backdrop-filter: blur(18px) saturate(180%); */
+      transform-origin: center;
+      transition: background 0.2s;
+      pointer-events: none;
       font-weight: 200;
     }
     .close-x-bar1 {
@@ -324,7 +310,7 @@ html, body, #root {
 
   /* BODY: centro verticale + CTA in basso */
   .bs-mobile-body {
-    height: calc(100vh - (96px + env(safe-area-inset-top, 0px)));
+    height: calc(100vh - 96px);
     padding: 0 16px 24px;
     box-sizing: border-box;
 
@@ -382,64 +368,163 @@ html, body, #root {
     cursor: pointer;
   }
 }
-
-/* ===== MOBILE: fascia nera come Azienda (copre anche notch) ===== */
 @media (max-width: 1200px) {
-  .navbar-glass {
-    top: 0 !important;
-    height: calc(96px + env(safe-area-inset-top, 0px)) !important;
-    padding-top: env(safe-area-inset-top, 0px) !important;
-    background: transparent !important;
+  /* overlay full screen */
+  #mobile-menu.bs-mobile-overlay {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    overflow: hidden;
+
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    isolation: isolate;
   }
 
-  .navbar-glass::before {
+  /* decorazioni dietro */
+  #mobile-menu.bs-mobile-overlay::before,
+  #mobile-menu.bs-mobile-overlay::after {
     content: "";
     position: absolute;
-    inset: 0;
-    background: rgba(8, 12, 20, 0.55); /* ← identico effetto “Azienda” */
-    backdrop-filter: blur(18px) saturate(180%);
-    -webkit-backdrop-filter: blur(18px) saturate(180%);
-    border-bottom: 1px solid rgba(255,255,255,0.06);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+    z-index: -1;
     pointer-events: none;
+    display: block;
   }
 
-  .navbar-glass-inner {
-    position: relative;
-    z-index: 1;
-    height: 96px !important;
-
-    /* IMPORTANTISSIMO: niente doppio glass */
-    background: transparent !important;
-    border: 0 !important;
-    box-shadow: none !important;
-  }
-}
-/* ===== SOLO HOMEPAGE (mobile): fascia nera come Azienda ===== */
-@media (max-width: 1200px) {
-  body.is-home .navbar-glass {
-    top: 0 !important;
-    height: calc(96px + env(safe-area-inset-top, 0px)) !important;
-    padding-top: env(safe-area-inset-top, 0px) !important;
-    background: transparent !important;
+  #mobile-menu.bs-mobile-overlay::before {
+    width: 520px;
+    height: 520px;
+    top: -220px;
+    left: -220px;
+    background: radial-gradient(
+      circle at 35% 35%,
+      rgba(0, 61, 214, 0.22),
+      rgba(0, 61, 214, 0) 60%
+    );
   }
 
-  body.is-home .navbar-glass::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(8, 12, 20, 0.70) !important;
-    backdrop-filter: blur(18px) saturate(180%) !important;
-    -webkit-backdrop-filter: blur(18px) saturate(180%) !important;
-    pointer-events: none;
+  #mobile-menu.bs-mobile-overlay::after {
+    width: 520px;
+    height: 520px;
+    bottom: -260px;
+    right: -260px;
+    background: radial-gradient(
+      circle at 45% 45%,
+      rgba(255, 255, 255, 0.10),
+      rgba(255, 255, 255, 0) 60%
+    );
   }
 
-  body.is-home .navbar-glass-inner {
-    position: relative;
-    z-index: 1;
-    height: 96px !important;
-    background: transparent !important;
-    border: 0 !important;
-    box-shadow: none !important;
+  /* TOPBAR: stessa identica griglia/padding della navbar chiusa */
+  .bs-mobile-topbar {
+    height: 96px;         /* uguale navbar */
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 16px;      /* uguale tua navbar mobile */
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+  }
+
+  /* X deve occupare lo stesso “box” del burger */
+  .bs-mobile-close {
+     display: inline-flex !important;
+     align-items: center;
+     justify-content: center;
+     width: 40px;
+     height: 40px;
+       background: none !important;
+       border: none !important;
+       box-shadow: none !important;
+       padding: 0;
+       position: relative;
+  }
+
+    /* Barre custom per la X */
+    .close-x-bar {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 25px;
+      height: 3px;
+      background: #fff;
+      border-radius: 2px;
+      transform-origin: center;
+      transition: background 0.2s;
+      pointer-events: none;
+      font-weight: 200;
+    }
+    .close-x-bar1 {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+    .close-x-bar2 {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+  /* BODY: centro verticale + CTA in basso */
+  .bs-mobile-body {
+    height: calc(100vh - 96px);
+    padding: 0 16px 24px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* voci CENTRATE verticalmente */
+  .bs-mobile-links {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centro verticale */
+    gap: 32px;
+  }
+
+  /* link: NO underline */
+  .bs-mobile-link {
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+
+    font-family: "Host Grotesk", sans-serif;
+    font-size: 28px;
+    line-height: 1.15;
+    font-weight: 300;
+    color: #fff;
+
+    text-decoration: none;
+  }
+
+  /* CTA in basso */
+  .bs-mobile-cta-wrap {
+    display: flex;
+    justify-content: center;
+    padding-top: 16px;
+  }
+
+  .bs-mobile-cta {
+    height: 40px;
+    padding: 8px 16px;
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    color: #001b66;
+
+    font-family: "Host Grotesk", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+
+    cursor: pointer;
   }
 }
