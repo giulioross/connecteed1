@@ -528,3 +528,18 @@ html, body, #root {
     cursor: pointer;
   }
 }
+/* iPhone notch / Dynamic Island safe-area */
+.navbar-glass {
+  top: env(safe-area-inset-top, 0px) !important;
+  padding-top: 0 !important;
+}
+/* iPhone notch / Dynamic Island */
+.navbar-glass {
+  top: env(safe-area-inset-top, 0px);
+  padding-top: env(safe-area-inset-top, 0px);
+  height: calc(96px + env(safe-area-inset-top, 0px));
+}
+
+.navbar-glass-inner {
+  height: 96px;
+}
