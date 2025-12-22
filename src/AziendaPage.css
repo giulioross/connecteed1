@@ -218,14 +218,17 @@ html, body, #root {
    VALORI
 =========================== */
 .values-section {
-  margin-top: 153.5px;
-  max-width: 1360px;
-  
+  margin: 153.5px auto 0;
+  max-width: 1440px;
+              /* 🔥 QUESTO mancava */
+  width: 100%;
+
   display: grid;
   grid-template-columns: 553px 1fr;
   column-gap: 179px;
   align-items: start;
 }
+
 
 .section-title {
   font-size: 40px;
