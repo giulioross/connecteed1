@@ -17,25 +17,25 @@
   padding-top: env(safe-area-inset-top, 0px);
 
   /* ✅ sposta qui l'effetto glass */
-  background: #080c14;
-  /* backdrop-filter: blur(18px) saturate(180%); */
-  /* -webkit-backdrop-filter: blur(18px) saturate(180%); */
+  background: rgba(8, 12, 20, 0.55);
+  backdrop-filter: blur(18px) saturate(180%);
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
-
-  /* Fallback per device che non supportano env() */
-  min-height: 96px;
-}
-
-@supports (padding-top: env(safe-area-inset-top)) {
-  .navbar-glass {
-    height: calc(96px + env(safe-area-inset-top));
-    padding-top: env(safe-area-inset-top);
-  }
 
   opacity: 0;
   transform: translateY(-20px);
   transition: opacity .4s ease, transform .4s ease;
+}
+@supports (padding-top: env(safe-area-inset-top)) {
+  .navbar-glass {
+    height: calc(96px + env(safe-area-inset-top));
+    padding-top: env(safe-area-inset-top);
+
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity .4s ease, transform .4s ease;
+  }
 }
 
 /* animazione ingresso */
@@ -325,7 +325,7 @@ html, body, #root {
 
   /* BODY: centro verticale + CTA in basso */
   .bs-mobile-body {
-    height: calc(100vh - 96px);
+    height: calc(100vh - (96px + env(safe-area-inset-top, 0px)));
     padding: 0 16px 24px;
     box-sizing: border-box;
 
