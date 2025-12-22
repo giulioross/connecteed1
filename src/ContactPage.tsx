@@ -89,6 +89,37 @@ const pageStyles = `
    641px – 1024px
    NON tocca desktop, NON tocca mobile
    =========================================== */
+   /* =====================================================
+   DESKTOP FLUIDO 1025px → 1439px
+   Stesso layout 1440px, ma senza overflow
+   ===================================================== */
+@media (min-width: 1025px) and (max-width: 1439px) {
+
+  .contact-form-container {
+    gap: 80px !important;              /* riduce gap */
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+  }
+
+  .text-column {
+    width: auto !important;
+    max-width: 620px !important;
+    flex: 1 1 0;
+  }
+
+  .form-column {
+    width: auto !important;
+    max-width: 520px !important;
+    min-width: 0 !important;
+    flex: 1 1 0;
+  }
+
+  .contact-form {
+    width: 100% !important;
+    max-width: 520px !important;
+  }
+}
+
 @media (min-width: 641px) and (max-width: 1024px) {
 
   /* layout resta a 2 colonne come desktop */
@@ -350,7 +381,7 @@ function FloatingInput({
 
   return (
     <div
-      className="floating-input-container w-[550px] md:w-[288px]"
+      className="floating-input-container  md:w-[288px]"
       style={{ position: "relative", marginBottom: 32 }}
     >
       <label
