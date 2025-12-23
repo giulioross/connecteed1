@@ -302,12 +302,15 @@ html, body, #root {
       top: 50%;
       width: 25px;
       height: 3px;
-      background: #fff;
+      background: #fff !important;
       border-radius: 2px;
       transform-origin: center;
       transition: background 0.2s;
       pointer-events: none;
       font-weight: 200;
+      box-shadow: none !important;
+      filter: none !important;
+      opacity: 1 !important;
     }
     .close-x-bar1 {
       transform: translate(-50%, -50%) rotate(45deg);
